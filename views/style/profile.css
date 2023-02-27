@@ -35,6 +35,7 @@ body {
     border : none;
     border-bottom : solid 1px #DC776F;
     margin-right: 1em;
+    background-color: rgba(128, 128, 128, 0.18);
 }
 
 .bi-pencil-fill{
@@ -54,21 +55,6 @@ body {
     text-align: center;
     align-items: center;
     font-family: 'Biryani', sans-serif;
-}
-
-button {
-    width:60%;
-    background-color: #DC776F;
-    border:none;
-    border-radius : 12px;
-    color: #fffafa;
-    padding :0.5em;
-    font-size: 17px;
-}
-
-button:hover{
-    background-color: #fffafa;
-    color:#DC776F;
 }
 
 #deleteBtn {
