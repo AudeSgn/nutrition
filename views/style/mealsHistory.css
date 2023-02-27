@@ -1,0 +1,41 @@
+.containerTable {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    font-family :'Sansita', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    padding: 1em;
+}
+
+.date {
+    background-color: #DC776F;
+    border:none;
+    text-align: center;
+}
+
+table{
+    border : solid black 1px;
+    border-collapse: collapse;
+    font-family: 'Biryani', sans-serif;
+    justify-content: center;
+    background-color: #FFFAFA;
+}
+
+th, td {
+border-bottom: solid black 1px;;
+}
+
+/* Responsive -> towards desktop */
+
+@media screen and (min-width:640px) {
+
+    .containerTable {
+        flex-direction: row;
+    }
+    
+} 
