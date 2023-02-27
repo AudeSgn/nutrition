@@ -63,6 +63,10 @@ p {
   margin-left: 5vw;
   margin-right: 5vw;
 }
+.imgMeal {
+  width: 57px;
+  height: 52px;
+}
 
 .btnMeal {
   width: 109.86px;
@@ -74,6 +78,7 @@ p {
   border: none;
   cursor: pointer;
 }
+
 .btnMeal:hover {
   background-color: #fffafa;
   color: #dc776f;
@@ -83,12 +88,12 @@ p {
 }
 
 /* ......................................graphic */
-#graphCalories {
+/* #graphCalories {
   width: 264px;
   height: 167px;
   left: 50px;
   top: 544px;
-}
+} */
 
 /* .....................................Bouton historique */
 #historic {
@@ -96,7 +101,6 @@ p {
 }
 #btnHistoric {
   width: 193px;
-  height: 26px;
   color: #fffafa;
   background: #dc776f;
   border-radius: 10px;
@@ -114,11 +118,13 @@ p {
   text-align: center;
 }
 
+#inputDate {
+  text-align: center;
+}
 #dateMealModal {
   text-align: center;
   margin-bottom: 3vh;
   margin-top: 1vh;
-  background-color: red;
   border-radius: 15px;
 }
 
@@ -127,11 +133,14 @@ p {
   padding-left: 2vw;
   padding-right: 2vw;
 }
+
 .btnModalMealForm {
   background: #dc776f;
   color: #fffafa;
   border: none;
   border-radius: 10px;
+  width: 30vw;
+  justify-content: center;
 }
 
 .btnModalMealForm:hover {
@@ -139,9 +148,18 @@ p {
   color: #dc776f;
 }
 
+#titleImcModal {
+  text-align: center;
+}
 #descriptionImcModal {
-  text-align: justify;
   margin-top: 15px;
+  text-align: justify;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+#imgImcModal {
+  width: 100vw;
+  margin-bottom: 3vh;
 }
 
 #modalAlertContent {
@@ -154,17 +172,12 @@ p {
     height: 100vh;
   }
 
-  .btnModalMealForm:hover {
-    background-color: #fffafa;
-    color: #dc776f;
-  }
   /* ..............................................boutons IMC et calories */
   #buttonsRound {
     display: flex;
     columns: 2;
     place-content: start;
     margin-left: 5vw;
-    /* margin-right: 50%; */
   }
 
   #btnImc {
@@ -189,16 +202,17 @@ p {
 
   /* ..........................................Modal */
 
-  .modal-bodyImc {
-    width: 100vw;
-  }
   #dateMealModal {
     text-align: center;
-    background-color: aqua;
+  }
+  .btnModalMealForm {
+    justify-content: center;
+    width: 10vw;
   }
 
-  #dateMealModal {
-    text-align: center;
+  #imgImcModal {
+    width: 100%;
+    margin-bottom: 3vh;
   }
   /* .........................................MILIEU avec bouton repas et graph */
   #desktopVersion {
@@ -227,8 +241,6 @@ p {
   #btnHistoric {
     width: 422.76px;
     height: 46px;
-    left: 857px;
-    top: 825px;
     font-size: 20px;
   }
 }
