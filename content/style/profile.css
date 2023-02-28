@@ -1,10 +1,3 @@
-body {
-    margin: auto;
-    width: 100vw;
-    height:100vh;
-    color : rgb(60, 56, 56);
-}
-
 /* FORM */
 
 #containerForm {
@@ -12,6 +5,7 @@ body {
     display: flex;
     justify-content: center;
     align-items:center;
+
 }
 
 .inline {
@@ -62,6 +56,10 @@ body {
     text-decoration: none;
     color : #DC776F;
     font-style: italic;
+}
+
+#profileSubmitBtn {
+    width:60%;
 }
 
 /* Responsive -> towards desktop */
