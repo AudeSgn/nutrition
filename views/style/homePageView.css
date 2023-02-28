@@ -100,7 +100,7 @@ p {
   text-align: center;
 }
 #btnHistoric {
-  width: 193px;
+  width: 170px;
   color: #fffafa;
   background: #dc776f;
   border-radius: 10px;
@@ -239,7 +239,7 @@ p {
     margin-right: 5vw;
   }
   #btnHistoric {
-    width: 422.76px;
+    width: 350px;
     height: 46px;
     font-size: 20px;
   }
