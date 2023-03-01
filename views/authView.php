@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./style/auth.css">
+    <link rel="stylesheet" href="./../content/style/auth.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
 </head>
 
@@ -42,7 +42,7 @@
             </form>
         </div>
         <div class="form-container login-container">
-            <form action="#">
+            <form action="./../controllers/loginController.php" method="post">
                 <h1>Se connecter</h1>
                 <div class="social-container">
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -50,12 +50,13 @@
                     <a href="#"><i class="fab fa-linkedin-in"></i></a>
                 </div>
                 <span>Je n'ai pas de compte</span>
-                <?php if (isset($_SESSION["error"]["id"])) {?>
+                <?php session_start();
+                if (isset($_SESSION["error"]["id"])) {?>
                 <label for="error_id" class="error"><?= $_SESSION["error"]["id"] ?></label>
                 <?php } ?>
-                <input type="text" placeholder="identifiant">
-                <input type="password" placeholder="mot de passe">
-                <button>Se connecter</button>
+                <input type="text" name="username" placeholder="identifiant">
+                <input type="password" name="password" placeholder="mot de passe">
+                <input type="submit" value="Se connecter">
 
             </form>
         </div>
