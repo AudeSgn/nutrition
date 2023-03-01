@@ -1,6 +1,8 @@
 <?php
 
-function calculCalorie($weight, $size, $age, $sex, $sportiveActivity) {
+
+function calculCalorie($weight, $size, $age, $sex, $sportiveActivity)
+{
     $resultWeight = $weight * 10;
     $resultSize = $size * 6.25;
     $result = $resultWeight + $resultSize;
@@ -19,4 +21,14 @@ function calculCalorie($weight, $size, $age, $sex, $sportiveActivity) {
         $result *= 1.725;
     }
     return $result;
+}
+
+
+function createMeal()
+{
+    if (!empty($_POST)) {
+        $calories = $_POST['calories'];
+        $meal_details = $_POST['details'];
+        $result = getInformationsMeal($calories, $meal_details);
+    }
 }
