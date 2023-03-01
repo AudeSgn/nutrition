@@ -37,9 +37,6 @@ transition:.6s ease-in-out;
 
 }
 
-
-
-
 .sign-up-container{
 left: 0;
 width: 50%;
@@ -61,7 +58,6 @@ animation: show .6s
 
 }
 
-
 @keyframes show {
 0%, 49.99%{
     opacity: 0;
@@ -79,8 +75,6 @@ animation: show .6s
     
     }
 
-
-
 form{
     background-color: #fff;
 display: flex;
@@ -91,7 +85,6 @@ padding:60px;
 height: 100%;
 text-align: center;
 }
-
 
 input{
 background-color: #e8f4e1;
@@ -121,13 +114,10 @@ transition: .2s ease-in;
 
 }
 
-
 button:hover{
     cursor: pointer;
     color:#B6CFA7;
     background-color:#DC776F;
-
-
 }
 
 button:active{
@@ -168,15 +158,14 @@ a{
 
 }
 
-
 label{
     font-size: 15px;
     margin:10px;
     padding:5px
 }
+
 .sexe {
     display: inline-flex;
-
 }
 
 .overlay-container{
@@ -188,7 +177,6 @@ height: 100%;
 overflow: hidden;
 z-index: 100;
 transition: transform .6s ease-in-out;
-
 }
 
 .container.panel-active .overlay-container{
@@ -205,13 +193,12 @@ transition: transform .6s ease-in-out;
     width: 200%;
     transform: translateX(0);
     transition: transform .6s ease-in-out;
-
 }
 
 .container.panel-active .overlay{
     transform: translateX(50%);
-
 }
+
 .overlay-panel{
     position: absolute;
     display: flex;
@@ -225,9 +212,6 @@ transition: transform .6s ease-in-out;
     width: 50%;
     transform: translateX(0);
     transition: transform .6s ease-in-out;
-
-
-
 }
 
 .overlay-left{
@@ -248,17 +232,12 @@ transition: transform .6s ease-in-out;
 }
 
 p{
-
     font-size: 14px;
     font-weight: 100;
     line-height: 20px;
     letter-spacing: .5px;
-    margin: 20px 0 30px;
-    
+    margin: 20px 0 30px;   
 }
-
-/* #adf0d1 #e7f0fd */
-
 
 .scroller {
     width: 100%;
@@ -267,5 +246,3 @@ p{
     scrollbar-color:#438b6a;
     scrollbar-width: thin;
   }
-  
-
