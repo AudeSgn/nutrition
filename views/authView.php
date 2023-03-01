@@ -13,8 +13,6 @@
 <body>
     <div class="container" id="container">
         <div class="form-container sign-up-container">
-
-
             <form action="#">
 
                 <h1>Créer un compte</h1>
@@ -27,7 +25,7 @@
                 <div class="scroller">
                     <input type="text" placeholder="Nom">
                     <input type="text" placeholder="Prénom">
-                    <input type="email" placeholder="Email">
+                    <input type="text" placeholder="Nom d'utilisateur">
                     <input type="password" placeholder="Nouveau mot de passe">
                     <input type="text" placeholder="Taille(cm)">
                     <input type="text" placeholder="Poids(kg)">
@@ -39,27 +37,10 @@
                         <input type="radio" name=" genre">
                     </div>
 
-                    <button> Créer le compte</button>
+                    <button id="btn-sign"> Créer le compte</button>
                 </div>
             </form>
-
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         <div class="form-container login-container">
             <form action="#">
                 <h1>Se connecter</h1>
@@ -92,46 +73,8 @@
                     <button class="ghost" id="signUp">Créer un compte</button>
                 </div>
             </div>
-
-
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     <script src="./js/auth.js"></script>
