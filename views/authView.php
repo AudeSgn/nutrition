@@ -50,7 +50,10 @@
                     <a href="#"><i class="fab fa-linkedin-in"></i></a>
                 </div>
                 <span>Je n'ai pas de compte</span>
-                <input type="email" placeholder="identifiant">
+                <?php if (isset($_SESSION["error"]["id"])) {?>
+                <label for="error_id" class="error"><?= $_SESSION["error"]["id"] ?></label>
+                <?php } ?>
+                <input type="text" placeholder="identifiant">
                 <input type="password" placeholder="mot de passe">
                 <button>Se connecter</button>
 

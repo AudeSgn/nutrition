@@ -4,12 +4,13 @@ if (isset($_POST["username"]) && isset($_POST["password"])) {
     $username = $_POST["username"];
     $user = new User();
     $id = $user->getIdByAuth($username, $_POST["password"]);
+    session_start();
     if ($id == true) {
-        session_start();
         $_SESSION["auth"]["id"] = $id;
-        header("Location: ./../views/viewHomePage.html");
+        header("Location: ./../views/viewHomePage.php");
     } else {
-        header("Location: ./../views/authView.html");
+        $_SESSION["error"]["id"] = "Nom d'utilisateur ou mot de passe incorecte";
+        header("Location: ./../views/authView.php");
     }
 }
 
