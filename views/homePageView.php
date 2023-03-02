@@ -91,10 +91,12 @@ ob_start(); ?>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modalMeal-body">
-        <div id="inputDate">
-          <input type="date" id="dateMealModal" value="<?php echo date('Y-m-d'); ?>" />
-        </div>
-        <form method="post" action="" id="formMeal">
+
+        <form method="post" action="<?php echo "../index.php?action=createMeal" ?>" id="formMeal">
+          <div id="inputDate">
+            <input type="date" id="dateMealModal" value="<?php echo date('Y-m-d'); ?>" />
+          </div>
+          <input type="hidden" id="typeOfMeal" name="typeOfMeal">
           <div id="numberOfCalories">
             <label for="numberCaloriesForm" class="form-label">Nombre de calories</label>
             <input type="text" class="form-control mb-4" id="numberCaloriesForm" name="calories" placeholder="Indique le nombre de calories de ton repas" required />
@@ -103,12 +105,13 @@ ob_start(); ?>
             <label for="mealDescriptionForm" class="form-label">Décris ton repas</label>
             <textarea type="text" class="form-control" id="mealDescriptionForm" name="description" placeholder="Décris ton repas"></textarea>
           </div>
-        </form>
+
       </div>
       <div class="modal-footer border border-0">
-        <button type="button" class="btnModalMealForm" onclick="validateMealInfoForm()" data-bs-dismiss="modal" data-bs-toggle="modal">Valider</button>
+        <button type="submit" class="btnModalMealForm" name="btnValider" onclick="validateMealInfoForm()">Valider</button>
         <button type="button" class="btnModalMealForm">Annuler</button>
       </div>
+      </form>
     </div>
   </div>
 </div>
@@ -128,8 +131,7 @@ ob_start(); ?>
     </div>
   </div>
 </div>
-<script src="js/graphic.js"></script>
-<!-- <script src="../views/js/meal.js"></script> -->
+
 
 
 

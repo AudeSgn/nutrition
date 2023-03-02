@@ -1,6 +1,7 @@
 // Afficher le nom du repas dans la modal de création d'un repas
 function displayModalTitle(title) {
   document.getElementById("mealModalTitle").innerHTML = title;
+  document.getElementById("typeOfMeal").value = title;
 }
 
 // Afficher l'alerte quand le nombre de calories journalières dépasse celui indiqué par l'utilisateur

@@ -22,13 +22,3 @@ function calculCalorie($weight, $size, $age, $sex, $sportiveActivity)
     }
     return $result;
 }
-
-
-function createMeal()
-{
-    if (!empty($_POST)) {
-        $calories = $_POST['calories'];
-        $meal_details = $_POST['details'];
-        $result = getInformationsMeal($calories, $meal_details);
-    }
-}
