@@ -56,7 +56,9 @@ ob_start(); ?>
     </div>
   </div>
   <div id="historic">
+
     <a href="../index.php?action=displayMeals">
+
       <button type="button" name="btnHistoric" id="btnHistoric">Voir mes repas</button>
     </a>
   </div>
@@ -97,10 +99,12 @@ ob_start(); ?>
         <form method="post" action="" id="formMeal">
           <div id="numberOfCalories">
             <label for="numberCaloriesForm" class="form-label">Nombre de calories</label>
-            <input type="text" class="form-control mb-4" id="numberCaloriesForm" name="calories" placeholder="Indique le nombre de calories de ton repas" />
+
+            <input type="text" class="form-control mb-4" id="numberCaloriesForm" name="calories" placeholder="Indique le nombre de calories de ton repas" required />
           </div>
           <div id="mealDetails">
-            <label for="mealDescriptionForm" class="form-label">Nombre de calories</label>
+            <label for="mealDescriptionForm" class="form-label">Décris ton repas</label>
+
             <textarea type="text" class="form-control" id="mealDescriptionForm" name="description" placeholder="Décris ton repas"></textarea>
           </div>
         </form>
@@ -128,28 +132,6 @@ ob_start(); ?>
     </div>
   </div>
 </div>
-<script src="js/graphic.js"></script>
-<!-- <script src="../views/js/meal.js"></script> -->
-
-<script>
-  function displayModalTitle(title) {
-    document.getElementById("mealModalTitle").innerHTML = title;
-  };
-
-  function validateMealInfoForm() {
-    console.log("toto");
-    // Afficher modal alert quand calories souhaitais dépassées
-    let mealCalories = parseInt(document.getElementById("numberCaloriesForm").value);
-    let defautCalories = parseInt(document.getElementById("numberCalories").innerHTML);
-    // Si le numbre afficher dans l'input est supérieur au nombre de calories journalier choisi par l'utilisateur
-    if (mealCalories > defautCalories) {
-
-      const myModal = new bootstrap.Modal(document.getElementById('modalAlertCalories'), {});
-      myModal.show();
-      //une alert est crée au clique du bouton Valider
-    }
-  }
-</script>
 
 <!-- </div> -->
 <?php $content = ob_get_clean();
