@@ -1,6 +1,6 @@
 <?php
-include('./views/homePageView.php');
+require_once './controllers/mealsController.php';
 
-if ($_GET['action'] == 'createMeal') {
-    createMeal();
-};
+if ($_GET['action'] == 'displayMeals') {
+    displayMealsHistory();
+}
