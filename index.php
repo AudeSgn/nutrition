@@ -1,11 +1,9 @@
 <?php
+include('./controllers/mealController.php');
 
-require('./controllers/mealController.php');
-
+acceuil();
 
 
 if ($_GET['action'] == 'createMeal') {
     createMeal();
-    var_dump($_POST);
-    die;
 };

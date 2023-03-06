@@ -1,14 +1,16 @@
 <?php
 
-// include '../models/mealModel.php';
-// require "./db/db.php";
-// var_dump($_POST);
-// die;
+require '../models/mealModel.php';
+require "./db/db.php";
+
+function acceuil()
+{
+    require './views/homePageView.php';
+}
 
 function createMeal()
 {
-    // print_r("toto");
-    // die;
+    echo "function createMeal";
     if (!empty($_POST)) {
         $meal_type = $_POST['typeOfMeal'];
         $calories = $_POST['calories'];
@@ -24,7 +26,6 @@ function createMeal()
             echo "<p> Une erreur est survenue</p>";
         }
     }
-    return false;
 }
 
 // $_SESSION["auth"]["id"]
