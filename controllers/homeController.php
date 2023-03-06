@@ -7,8 +7,6 @@ $weight = $user['weight'];
 $size = $user['size'];
 $today = date("y-m-d");
 $age = date_diff(date_create($user['birthdate']), date_create($today));
-
-
 $sex = $user['sex'];
 $sportiveActivity = $user['sportive_activity'];
 
@@ -31,7 +29,7 @@ function calculCalorie($weight, $size, $age, $sex, $sportiveActivity)
     } else {
         $result *= 1.725;
     }
-    return $result;
+    return round($result);
 }
 
 $_SESSION["auth"]["calories"] = calculCalorie($weight, $size, $age, $sex, $sportiveActivity);
