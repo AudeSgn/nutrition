@@ -56,7 +56,7 @@ ob_start(); ?>
     </div>
   </div>
   <div id="historic">
-    <a href="../index.php?action=displayMeals">
+    <a href="../controllers/displayMealController.php?action=displayMeals">
       <button type="button" name="btnHistoric" id="btnHistoric">Voir mes repas</button>
     </a>
   </div>
@@ -90,25 +90,29 @@ ob_start(); ?>
         <div id="mealModalTitle"></div>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modalMeal-body">
-        <div id="inputDate">
-          <input type="date" id="dateMealModal" value="<?php echo date('Y-m-d'); ?>" />
-        </div>
-        <form method="post" action="" id="formMeal">
+      <form action="<?php echo ".\index.php" ?>" method="post">
+        <div class="modalMeal-body">
+          <div id="inputDate">
+            <input type="date" id="dateMealModal" value="<?php echo date('Y-m-d'); ?>" />
+          </div>
+          <input type="hidden" id="typeOfMeal" name="typeOfMeal">
           <div id="numberOfCalories">
             <label for="numberCaloriesForm" class="form-label">Nombre de calories</label>
-            <input type="text" class="form-control mb-4" id="numberCaloriesForm" name="calories" placeholder="Indique le nombre de calories de ton repas" />
+
+            <input type="text" class="form-control mb-4" id="numberCaloriesForm" name="calories" placeholder="Indique le nombre de calories de ton repas" required />
           </div>
           <div id="mealDetails">
-            <label for="mealDescriptionForm" class="form-label">Nombre de calories</label>
+            <label for="mealDescriptionForm" class="form-label">Décris ton repas</label>
+
             <textarea type="text" class="form-control" id="mealDescriptionForm" name="description" placeholder="Décris ton repas"></textarea>
           </div>
-        </form>
-      </div>
-      <div class="modal-footer border border-0">
-        <button type="button" class="btnModalMealForm" onclick="validateMealInfoForm()" data-bs-dismiss="modal" data-bs-toggle="modal">Valider</button>
-        <button type="button" class="btnModalMealForm">Annuler</button>
-      </div>
+        </div>
+        <div class="modal-footer border border-0">
+          <button type="submit" class="btnModalMealForm" name="btnValider" onclick="validateMealInfoForm()">Valider</button>
+          <button type="submit" class="btnModalMealForm" name="btnValider">Valider</button>
+          <button type="button" class="btnModalMealForm">Annuler</button>
+        </div>
+      </form>
     </div>
   </div>
 </div>
