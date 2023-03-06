@@ -1,6 +1,7 @@
 <?php
-require_once '../models/mealsModel.php';
+require_once '../models/mealModel.php';
 
+session_start();
 
 if ($_GET['action'] == 'displayMeals') {
     displayMealsHistory();
@@ -8,6 +9,7 @@ if ($_GET['action'] == 'displayMeals') {
 
 function displayMealsHistory()
 {
-    $meals = getAllMeals();
+    $user_id = $_SESSION["auth"]["id"];
+    $meals = getAllMeals($user_id);
     require '../views/mealsHistoryView.php';
 }

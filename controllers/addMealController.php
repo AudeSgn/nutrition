@@ -1,6 +1,11 @@
 <?php
+session_start();
 
 include '../models/mealModel.php';
+
+if ($_GET['action'] == 'createMeal') {
+    createMeal();
+}
 
 function createMeal()
 {
@@ -21,10 +26,7 @@ function createMeal()
         $result = setInformationsMeal($meal_type, $calories, $meal_details, $meal_date, $user_id);
 
         if ($result === true) {
-            require './views/homePageView.php';
-            echo "succes !!";
-        } else {
-            echo "<p> Une erreur est survenue</p>";
+            require '../views/homePageView.php';
         }
     }
 }

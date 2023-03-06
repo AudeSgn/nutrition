@@ -1,10 +1,12 @@
 <?php
-require_once '../models/mealsModel.php';
+
+session_start();
+
+require_once '../models/mealModel.php';
 
 if ($_GET['action'] == 'modifyMeal') {
     modifyMeal();
 }
-
 
 function modifyMeal()
 {
@@ -18,7 +20,7 @@ function modifyMeal()
         $result = getModifyMeal($meal_id, $meal_date, $meal_type, $meal_calories, $meal_description);
 
         if ($result === true) {
-            $meals = getAllMeals();
+            $meals = getAllMeals($_SESSION["auth"]["id"]);
             require '../views/mealsHistoryView.php';
         } else {
             echo "<p> Une erreur est survenue</p>";

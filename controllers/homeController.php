@@ -1,10 +1,14 @@
 <?php
 
-require_once './models/userModel.php';
-$weight = $user['user_id'];
+require_once "./../models/userModel.php";
+session_start();
+$user = (new User())->getUserDatabyId($_SESSION["auth"]["id"])[0];
+$weight = $user['weight'];
 $size = $user['size'];
-$today = date("y.m.d");
+$today = date("y-m-d");
 $age = date_diff(date_create($user['birthdate']), date_create($today));
+
+
 $sex = $user['sex'];
 $sportiveActivity = $user['sportive_activity'];
 
@@ -30,8 +34,13 @@ function calculCalorie($weight, $size, $age, $sex, $sportiveActivity)
     return $result;
 }
 
+$_SESSION["auth"]["calories"] = calculCalorie($weight, $size, $age, $sex, $sportiveActivity);
+
 function BMIcalc($weight, $size)
 {
-    $bmi = $weight / (($size * 100) * ($size * 100));
-    return $bmi;
+    $bmi = $weight / (($size / 100) * ($size / 100));
+    return round($bmi);
 }
+
+$_SESSION["auth"]["bmi"] = BMIcalc($weight, $size);
+header('Location: ../views/homePageView.php');
