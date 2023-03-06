@@ -52,7 +52,7 @@ ob_start(); ?>
     </div>
 
     <div id="graphCalories">
-      <canvas id="barCanvas" aria-label="chart"></canvas>
+      <canvas class="barCanvas" aria-label="chart"></canvas>
     </div>
   </div>
   <div id="historic">
