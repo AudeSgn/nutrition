@@ -15,7 +15,7 @@ ob_start(); ?>
     <div id="btnCalories">
       <div class="insideButtonsRound">
         <p>Calories/j</p>
-        <p id="numberCalories"><?= $_SESSION["auth"]["calories"]  ?></p>
+        <p id="numberCalories"><?= $_SESSION["auth"]["calories"] ?></p>
         <p>kcal</p>
       </div>
     </div>
@@ -107,10 +107,10 @@ ob_start(); ?>
           <div id="mealDetails">
             <div class="erreur"></div>
             <label for="mealDescriptionForm" class="form-label">Décris ton repas</label>
-            <textarea type="text" class="form-control" id="mealDescriptionForm" name="details" placeholder="Décris ton repas" required value="<?php echo $meal_details ?>></textarea>
+            <textarea type="text" class="form-control" id="mealDescriptionForm" name="details" placeholder="Décris ton repas" required value="<?php echo $meal_details ?>"></textarea>
           </div>
         </div>
-        <div class=" modal-footer border border-0">
+        <div class="modal-footer border border-0">
           <button type="submit" class="btnModalMealForm" name="btnValider" onclick="validateMealInfoForm()">Valider</button>
           <button type="button" class="btnModalMealForm">Annuler</button>
         </div>

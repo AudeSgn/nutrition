@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- <link rel="stylesheet" href="../content/style/auth.css"> -->
     <link rel="stylesheet" href="./../content/style/designSystem.css">
     <link rel="stylesheet" href="./../content/style/profile.css">
     <link rel="stylesheet" href="./../content/style/mealsHistory.css">
@@ -27,12 +26,18 @@
 
     <header id="header">
         <div id="logoHello">
-            <a href="../controllers/homeController.php"><img src="./../assets/img/logo_nutri_watch.png" alt="NutriWatch logo"></a>
+            <a href="../controllers/homeController.php">
+                <img src="./../assets/img/logo_nutri_watch.png" alt="NutriWatch logo">
+            </a>
             <h1 id="hello">Hello, <?= $_SESSION["auth"]["username"] ?></h1>
         </div>
         <div id="icons">
-            <i class="fa-regular fa-user" id="logoUser" alt="paramètres personnels"></i>
-            <i class="fa-solid fa-power-off" id="logout" alt="se déconnecter"></i>
+            <a href="../controllers/displayProfileController.php">
+                <i class="fa-regular fa-user" id="logoUser" alt="paramètres personnels"></i>
+            </a>
+            <a href="../controllers/logoutController.php">
+                <i class="fa-solid fa-power-off" id="logout" alt="se déconnecter"></i>
+            </a>
         </div>
     </header>
 
