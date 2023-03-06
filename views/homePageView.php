@@ -2,7 +2,6 @@
 $title = 'Homepage';
 
 ob_start(); ?>
-<!-- <div class="container"> -->
 <div class="container">
   <div id="buttonsRound">
     <div id="btnImc">
@@ -57,6 +56,7 @@ ob_start(); ?>
   </div>
   <div id="historic">
     <a href="../controllers/displayMealController.php?action=displayMeals">
+
       <button type="button" name="btnHistoric" id="btnHistoric">Voir mes repas</button>
     </a>
   </div>
@@ -95,6 +95,7 @@ ob_start(); ?>
           <div id="inputDate">
             <input type="date" id="dateMealModal" value="<?php echo date('Y-m-d'); ?>" />
           </div>
+
           <input type="hidden" id="typeOfMeal" name="typeOfMeal">
           <div id="numberOfCalories">
             <label for="numberCaloriesForm" class="form-label">Nombre de calories</label>
@@ -119,7 +120,7 @@ ob_start(); ?>
 
 
 <!-- .........................................Modal alerte nombre calories dépassées -->
-<div class="modal fade" id="modalAlertCalories" tabindex="-1" aria-labelledby="modalAlertCalories" aria-hidden="true">
+<!-- <div class="modal fade" id="modalAlertCalories" tabindex="-1" aria-labelledby="modalAlertCalories" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content" id="modalAlertContent">
       <div class="modal-header border border-0">
@@ -131,29 +132,8 @@ ob_start(); ?>
       </div>
     </div>
   </div>
+
 </div>
-<script src="js/graphic.js"></script>
-<!-- <script src="../views/js/meal.js"></script> -->
-
-<script>
-  function displayModalTitle(title) {
-    document.getElementById("mealModalTitle").innerHTML = title;
-  };
-
-  function validateMealInfoForm() {
-    console.log("toto");
-    // Afficher modal alert quand calories souhaitais dépassées
-    let mealCalories = parseInt(document.getElementById("numberCaloriesForm").value);
-    let defautCalories = parseInt(document.getElementById("numberCalories").innerHTML);
-    // Si le numbre afficher dans l'input est supérieur au nombre de calories journalier choisi par l'utilisateur
-    if (mealCalories > defautCalories) {
-
-      const myModal = new bootstrap.Modal(document.getElementById('modalAlertCalories'), {});
-      myModal.show();
-      //une alert est crée au clique du bouton Valider
-    }
-  }
-</script>
 
 <!-- </div> -->
 <?php $content = ob_get_clean();
