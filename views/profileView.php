@@ -4,7 +4,7 @@ $title = 'Profile';
 ob_start(); ?>
 
 <div id="containerForm">
-    <form action="" id="profileForm">
+    <form action="<?php echo "./controllers/updateProfileController.php?action=updateProfileInformations" ?>" id="profileForm">
         <div class="responsive3lines">
             <div class="inline">
                 <div>
@@ -54,7 +54,7 @@ ob_start(); ?>
             <div class="inline">
                 <div>
                     <label for="calories" class="formElement"> Calories journalières <i class="bi bi-pencil-fill"></i></label>
-                    <input readonly="readonly" type="number" name="calories" placeholder="<? echo calculCalorie($result) ?>" class="formElement input">
+                    <input readonly="readonly" type="number" name="calories" placeholder="" class="formElement input">
                 </div>
             </div>
             <div class="bottomForm">
