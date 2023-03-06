@@ -55,7 +55,9 @@ ob_start(); ?>
     </div>
   </div>
   <div id="historic">
-    <a href="">
+
+    <a href="../index.php?action=displayMeals">
+
       <button type="button" name="btnHistoric" id="btnHistoric">Voir mes repas</button>
     </a>
   </div>
@@ -95,10 +97,12 @@ ob_start(); ?>
           <input type="hidden" id="typeOfMeal" name="typeOfMeal">
           <div id="numberOfCalories">
             <label for="numberCaloriesForm" class="form-label">Nombre de calories</label>
+
             <input type="text" class="form-control mb-4" id="numberCaloriesForm" name="calories" placeholder="Indique le nombre de calories de ton repas" required />
           </div>
           <div id="mealDetails">
             <label for="mealDescriptionForm" class="form-label">Décris ton repas</label>
+
             <textarea type="text" class="form-control" id="mealDescriptionForm" name="description" placeholder="Décris ton repas"></textarea>
           </div>
         </div>
@@ -126,10 +130,10 @@ ob_start(); ?>
       </div>
     </div>
   </div>
-</div> -->
 
+</div>
 
-<?php $content = ob_get_clean(); ?>
-<?php
+<!-- </div> -->
+<?php $content = ob_get_clean();
 require 'template.php';
 ?>
