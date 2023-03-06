@@ -56,7 +56,7 @@ ob_start(); ?>
   </div>
   <div id="historic">
 
-    <a href="./index.php?action=displayMeals">
+    <a href="../controllers/displayMealController.php?action=displayMeals">
 
       <button type="button" name="btnHistoric" id="btnHistoric">Voir mes repas</button>
     </a>
@@ -96,6 +96,7 @@ ob_start(); ?>
           <div id="inputDate">
             <input type="date" id="dateMealModal" name="meal_date" value="<?php echo date('Y-m-d'); ?>" />
           </div>
+
           <input type="hidden" id="typeOfMeal" name="typeOfMeal">
           <div id="numberOfCalories">
             <label for="numberCaloriesForm" class="form-label">Nombre de calories</label>

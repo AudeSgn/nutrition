@@ -9,10 +9,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- <link rel="stylesheet" href="../content/style/auth.css"> -->
-    <link rel="stylesheet" href="content/style/designSystem.css">
-    <link rel="stylesheet" href="content/style/profile.css">
-    <link rel="stylesheet" href="content/style/mealsHistory.css">
-    <link rel="stylesheet" href="content/style/homePageView.css">
+    <link rel="stylesheet" href="../content/style/designSystem.css">
+    <link rel="stylesheet" href="../content/style/profile.css">
+    <link rel="stylesheet" href="../content/style/mealsHistory.css">
+    <link rel="stylesheet" href="../content/style/homePageView.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Biryani&family=Sansita&family=Titillium+Web&display=swap" rel="stylesheet">
@@ -27,7 +27,7 @@
 
     <header id="header">
         <div id="logoHello">
-            <img src="./assets/img/logo_nutri_watch.png" alt="NutriWatch logo">
+            <img src="../assets/img/logo_nutri_watch.png" alt="NutriWatch logo">
             <h1 id="hello">Hello, <? $name ?></h1>
         </div>
         <div id="icons">
@@ -40,9 +40,9 @@
         <?= $content ?>
     </div>
 
-    <!-- <footer id="footer">
+    <footer id="footer">
         <span>Mentions Légales</span>
-    </footer> -->
+    </footer>
 
     <script src="../js/profile.js"></script>
     <!-- <script src="../js/graphic.js"></script> -->
