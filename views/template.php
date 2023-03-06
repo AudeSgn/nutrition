@@ -45,7 +45,7 @@
     </footer> -->
 
     <script src="../js/profile.js"></script>
-    <script src="../js/graphic.js"></script>
+    <!-- <script src="../js/graphic.js"></script> -->
     <script src="../js/meal.js"></script>
     <script src="./js/auth.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
