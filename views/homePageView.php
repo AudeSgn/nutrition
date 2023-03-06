@@ -91,23 +91,26 @@ ob_start(); ?>
         <div id="mealModalTitle"></div>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
+      <?php echo $message ?>
       <form action="<?php echo "../controllers/addMealController.php?action=createMeal" ?>" method="post">
         <div class="modalMeal-body">
           <div id="inputDate">
-            <input type="date" id="dateMealModal" name="meal_date" value="<?php echo date('Y-m-d'); ?>" />
+            <input type="date" id="dateMealModal" name="meal_date" value="<?php echo date('Y-m-d') ?>" />
           </div>
 
           <input type="hidden" id="typeOfMeal" name="typeOfMeal">
           <div id="numberOfCalories">
             <label for="numberCaloriesForm" class="form-label">Nombre de calories</label>
-            <input type="text" class="form-control mb-4" id="numberCaloriesForm" name="calories" placeholder="Indique le nombre de calories de ton repas" required />
+            <div class="erreur"></div>
+            <input type="text" class="form-control mb-4" id="numberCaloriesForm" name="calories" placeholder="Indique le nombre de calories de ton repas" required value="<?php echo $meal_type ?>" />
           </div>
           <div id="mealDetails">
+            <div class="erreur"></div>
             <label for="mealDescriptionForm" class="form-label">Décris ton repas</label>
-            <textarea type="text" class="form-control" id="mealDescriptionForm" name="details" placeholder="Décris ton repas" required></textarea>
+            <textarea type="text" class="form-control" id="mealDescriptionForm" name="details" placeholder="Décris ton repas" required value="<?php echo $meal_details ?>></textarea>
           </div>
         </div>
-        <div class="modal-footer border border-0">
+        <div class=" modal-footer border border-0">
           <button type="submit" class="btnModalMealForm" name="btnValider" onclick="validateMealInfoForm()">Valider</button>
           <button type="button" class="btnModalMealForm">Annuler</button>
         </div>
