@@ -1,13 +1,13 @@
 <?php
 $title = 'Homepage';
-
+session_start();
 ob_start(); ?>
 <div class="container">
   <div id="buttonsRound">
     <div id="btnImc">
       <div class="insideButtonsRound">
         <p>IMC :</p>
-        <p id="imcNumber"><? $bmi ?></p>
+        <p id="imcNumber"><?= $_SESSION["auth"]["bmi"] ?></p>
         <p id="imcType">Normal</p>
         <button type="button" name="btnDetails" id="btnDetails" data-bs-toggle="modal" data-bs-target="#modalDetailsImc">Détails</button>
       </div>
@@ -15,7 +15,7 @@ ob_start(); ?>
     <div id="btnCalories">
       <div class="insideButtonsRound">
         <p>Calories/j</p>
-        <p id="numberCalories"><? $result ?></p>
+        <p id="numberCalories"><?= $_SESSION["auth"]["calories"]  ?></p>
         <p>kcal</p>
       </div>
     </div>
@@ -51,7 +51,7 @@ ob_start(); ?>
     </div>
 
     <div id="graphCalories">
-      <canvas id="barCanvas" aria-label="chart"></canvas>
+      <canvas class="barCanvas" aria-label="chart"></canvas>
     </div>
   </div>
   <div id="historic">

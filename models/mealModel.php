@@ -20,7 +20,7 @@ function getAllMeals()
 {
     $pdo = getConnection();
     $query = $pdo->prepare("SELECT * FROM meal WHERE user_id=?");
-    $query->execute($user_id);
+    $query->execute(array($_SESSION["auth"]["id"]));
     $meals = $query->fetchAll();
     return $meals;
 }

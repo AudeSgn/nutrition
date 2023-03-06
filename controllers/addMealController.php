@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 include '../models/mealModel.php';
 
@@ -18,8 +19,7 @@ function createMeal()
         $calories = $_POST['calories'];
         $meal_details = $_POST['details'];
         $meal_date = $_POST['meal_date'];
-        $user_id = 1;
-        // user_id = $_SESSION["auth"]["id"]
+        $user_id = $_SESSION["auth"]["id"];
         $result = setInformationsMeal($meal_type, $calories, $meal_details, $meal_date, $user_id);
 
         if ($result === true) {
