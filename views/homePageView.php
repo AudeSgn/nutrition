@@ -55,6 +55,7 @@ ob_start(); ?>
     </div>
   </div>
   <div id="historic">
+
     <a href="../controllers/displayMealController.php?action=displayMeals">
 
       <button type="button" name="btnHistoric" id="btnHistoric">Voir mes repas</button>
@@ -90,27 +91,24 @@ ob_start(); ?>
         <div id="mealModalTitle"></div>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <form action="<?php echo ".\index.php" ?>" method="post">
+      <form action="<?php echo "../controllers/addMealController.php?action=createMeal" ?>" method="post">
         <div class="modalMeal-body">
           <div id="inputDate">
-            <input type="date" id="dateMealModal" value="<?php echo date('Y-m-d'); ?>" />
+            <input type="date" id="dateMealModal" name="meal_date" value="<?php echo date('Y-m-d'); ?>" />
           </div>
 
           <input type="hidden" id="typeOfMeal" name="typeOfMeal">
           <div id="numberOfCalories">
             <label for="numberCaloriesForm" class="form-label">Nombre de calories</label>
-
             <input type="text" class="form-control mb-4" id="numberCaloriesForm" name="calories" placeholder="Indique le nombre de calories de ton repas" required />
           </div>
           <div id="mealDetails">
             <label for="mealDescriptionForm" class="form-label">Décris ton repas</label>
-
-            <textarea type="text" class="form-control" id="mealDescriptionForm" name="description" placeholder="Décris ton repas"></textarea>
+            <textarea type="text" class="form-control" id="mealDescriptionForm" name="details" placeholder="Décris ton repas" required></textarea>
           </div>
         </div>
         <div class="modal-footer border border-0">
           <button type="submit" class="btnModalMealForm" name="btnValider" onclick="validateMealInfoForm()">Valider</button>
-          <button type="submit" class="btnModalMealForm" name="btnValider">Valider</button>
           <button type="button" class="btnModalMealForm">Annuler</button>
         </div>
       </form>
@@ -120,7 +118,7 @@ ob_start(); ?>
 
 
 <!-- .........................................Modal alerte nombre calories dépassées -->
-<!-- <div class="modal fade" id="modalAlertCalories" tabindex="-1" aria-labelledby="modalAlertCalories" aria-hidden="true">
+<div class="modal fade" id="modalAlertCalories" tabindex="-1" aria-labelledby="modalAlertCalories" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content" id="modalAlertContent">
       <div class="modal-header border border-0">
@@ -135,7 +133,6 @@ ob_start(); ?>
 
 </div>
 
-<!-- </div> -->
 <?php $content = ob_get_clean();
 require 'template.php';
 ?>
