@@ -40,9 +40,9 @@
         <?= $content ?>
     </div>
 
-    <footer id="footer">
+    <!-- <footer id="footer">
         <span>Mentions Légales</span>
-    </footer>
+    </footer> -->
 
     <script src="../js/profile.js"></script>
     <!-- <script src="../js/graphic.js"></script> -->

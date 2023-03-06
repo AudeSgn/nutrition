@@ -1,6 +1,7 @@
 <?php
-require_once '../models/mealsModel.php';
+require_once '../models/mealModel.php';
 
+$user_id = $_SESSION["auth"]["id"];
 
 if ($_GET['action'] == 'displayMeals') {
     displayMealsHistory();

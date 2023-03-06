@@ -1,6 +1,6 @@
 <?php
 
-require_once '../models/mealsModel.php';
+require_once '../models/mealModel.php';
 
 if ($_GET['action'] == 'deleteMeal') {
     deleteMeal();

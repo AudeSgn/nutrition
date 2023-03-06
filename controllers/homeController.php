@@ -1,12 +1,15 @@
 <?php
 
-require_once './models/userModel.php';
+require_once '../models/userModel.php';
+
 $weight = $user['user_id'];
 $size = $user['size'];
 $today = date("y.m.d");
 $age = date_diff(date_create($user['birthdate']), date_create($today));
 $sex = $user['sex'];
 $sportiveActivity = $user['sportive_activity'];
+
+
 
 function calculCalorie($weight, $size, $age, $sex, $sportiveActivity)
 {
@@ -35,3 +38,5 @@ function BMIcalc($weight, $size)
     $bmi = $weight / (($size * 100) * ($size * 100));
     return $bmi;
 }
+
+header('Location: ../views/homePageView.php');

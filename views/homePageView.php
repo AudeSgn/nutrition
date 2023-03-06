@@ -7,7 +7,7 @@ ob_start(); ?>
     <div id="btnImc">
       <div class="insideButtonsRound">
         <p>IMC :</p>
-        <p id="imcNumber"></p>
+        <p id="imcNumber"><? $bmi ?></p>
         <p id="imcType">Normal</p>
         <button type="button" name="btnDetails" id="btnDetails" data-bs-toggle="modal" data-bs-target="#modalDetailsImc">Détails</button>
       </div>
@@ -15,7 +15,7 @@ ob_start(); ?>
     <div id="btnCalories">
       <div class="insideButtonsRound">
         <p>Calories/j</p>
-        <p id="numberCalories">360</p>
+        <p id="numberCalories"><? $result ?></p>
         <p>kcal</p>
       </div>
     </div>

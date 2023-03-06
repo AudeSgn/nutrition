@@ -7,10 +7,9 @@ if (isset($_POST["username"]) && isset($_POST["password"])) {
     session_start();
     if ($id == true) {
         $_SESSION["auth"]["id"] = $id;
-        header("Location: ./../views/viewHomePage.php");
+        header("Location: ./../controllers/homeController.php");
     } else {
         $_SESSION["error"]["id"] = "Nom d'utilisateur ou mot de passe incorecte";
         header("Location: ./../views/authView.php");
     }
 }
-
