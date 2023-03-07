@@ -22,32 +22,37 @@
 
 <body>
 
-    <div class="bubble1"></div>
+    <div class="container1">
+        <header id="header">
+            <div id="logoHello">
+                <a href="./../controllers/homeController.php">
+                    <img src="./../assets/img/logo_nutri_watch.png" alt="NutriWatch logo">
+                </a>
+                <h1 id="hello">Hello, <?= $_SESSION["auth"]["username"] ?></h1>
+                <a href="../controllers/homeController.php">
+                    <i class="bi bi-arrow-left-circle-fill" id="returnBtn"></i>
+                </a>
+            </div>
+            <div id="icons">
+                <a href="./../controllers/displayProfileController.php">
+                    <i class="fa-regular fa-user" id="logoUser" alt="paramètres personnels"></i>
+                </a>
+                <a href="./../controllers/logoutController.php">
+                    <i class="fa-solid fa-power-off" id="logout" alt="se déconnecter"></i>
+                </a>
+            </div>
+        </header>
+        <div id="content">
+            <!-- <img src="../assets/img/blob.svg" alt="svg" id="svg"> -->
 
-    <header id="header">
-        <div id="logoHello">
-            <a href="../controllers/homeController.php">
-                <img src="./../assets/img/logo_nutri_watch.png" alt="NutriWatch logo">
-            </a>
-            <h1 id="hello">Hello, <?= $_SESSION["auth"]["username"] ?></h1>
+            <?= $content ?>
         </div>
-        <div id="icons">
-            <a href="../controllers/displayProfileController.php">
-                <i class="fa-regular fa-user" id="logoUser" alt="paramètres personnels"></i>
-            </a>
-            <a href="../controllers/logoutController.php">
-                <i class="fa-solid fa-power-off" id="logout" alt="se déconnecter"></i>
-            </a>
-        </div>
-    </header>
 
-    <div id="content">
-        <?= $content ?>
+        <footer id="footer">
+            <span>Mentions Légales</span>
+        </footer>
+
     </div>
-
-    <!-- <footer id="footer">
-        <span>Mentions Légales</span>
-    </footer> -->
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
     <script src="../js/profile.js"></script>

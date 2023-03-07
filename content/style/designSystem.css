@@ -1,24 +1,27 @@
 /* BODY */
 body {
+    margin:auto;
     background-color: #fffafa;
     width: 100vw;
-    height: 100vh;
-    overflow-y: scroll;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
-
+ 
   #content {
-    height : 70vh;
     width: 100%;
+    overflow-y: scroll;
     display: flex;
     flex-direction: column;
-    margin-top:40vh;
-
+    margin-top:20vh;
   }
 
+  #returnBtn {
+    font-size: 30px;
+    color : black;
+    margin-left:0.5em;
+  }
 /* HEADER */
 
 #header {
@@ -34,6 +37,13 @@ body {
     width: 150px;
 }
 
+.container1{
+    position: relative;
+    width: 100%;
+    background: url('../../assets/img/blob-scene-haikei.svg') center center no-repeat;
+    background-size: cover;
+  
+}
 #logoHello {
 display: flex;
 flex-direction: column;
@@ -55,6 +65,7 @@ margin-left: 5px;
 
 #icons i {
     font-size: 25px;
+    color:black;
 }
 
 /* BUTTONS */
@@ -74,24 +85,17 @@ margin-left: 5px;
     color:#DC776F;
 }
 
-.bubble1 {
-    position: absolute;
-    width: 386px;
-    height: 220px;
-    left: -133px;
-    top: -64px;
-    z-index: -1;
-    background: #B6CFA7;
-    border-radius: 156px;
+    
+    select {
+        background-color: #DC776F;
+        border-radius: 15px;
+        width : 120px;
+        height:50px;
     }
-    
-    
 /* FOOTER */
 
 #footer {
-    height: 15vh;
     width:100%;
-    position:fixed;
     bottom: 0;
     display: flex;
     align-items: flex-end;
@@ -112,24 +116,26 @@ margin-left: 5px;
     .containerTable {
         flex-direction: row;
     }
-    
-    .bubble1 {
-        width: 700px;
-        height: 220px;
-        left: -113px;
-        }
-
-} 
-
     #footer {
-        font-size : 18px;
+        font-size: 20px;
     }
-
+    #content {
+        overflow-y: hidden;
+        margin-top:15vh;
+      }
+    
 #header img {
-    width: 180px;
+    width: 200px;
 }
 
 #icons i {
     font-size: 35px;
 }
+#returnBtn {
+    margin-top: 1em;
+    
+  }
+
+} 
+
 
