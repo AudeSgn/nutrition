@@ -1,5 +1,7 @@
 <?php
 require_once '../models/userModel.php';
+
+
 session_start();
 
 $user = (new User())->getUserDatabyId($_SESSION["auth"]["id"])[0];
@@ -9,6 +11,8 @@ $size = $user['size'];
 $lastname = $user['lastname'];
 $firstname = $user['firstname'];
 $birthdate = $user['birthdate'];
+// var_dump($birthdate);
+// die;
 $sex = $user['sex'];
 $sportiveActivity = $user['sportive_activity'];
 

@@ -1,6 +1,5 @@
 <?php
-
-require './controllers/updateProfileController.php';
+require('./../db/db.php');
 
 function allInformationsUser()
 {
@@ -11,10 +10,10 @@ function allInformationsUser()
     return $profile;
 }
 
-function updateInformationsProfile($username, $lastname, $firstname, $birthdate, $sex, $weight, $size, $sportive_activity)
+function updateInformationsProfile($usernameModif, $lastnameModif, $firstnameModif, $birthdateModif, $sexModif, $weightModif, $sizeModif, $sportive_activityModif, $user_id)
 {
     $db = getConnection();
-    $query = $db->prepare("UPDATE user SET usernameModif=?, lastnameModif=?, firstanmeModif=?, birthdateModif=?, sexModif=?, weightModif=?, sizeModif=?, activityModif=? WHERE user_id=?");
-    $result = $query->execute(array($username, $lastname, $firstname, $birthdate, $sex, $weight, $size, $sportive_activity));
+    $query = $db->prepare("UPDATE user SET username=?, lastname=?, firstname=?, birthdate=?, sex=?, weight=?, size=?, sportive_activity=? WHERE user_id=?");
+    $result = $query->execute(array($usernameModif, $lastnameModif, $firstnameModif, $birthdateModif, $sexModif, $weightModif, $sizeModif, $sportive_activityModif, $user_id));
     return $result;
 }
