@@ -4,7 +4,7 @@ require './../models/profileModel.php';
 
 session_start();
 $user_id = $_SESSION["auth"]["id"];
-if (!empty($_POST) && !empty($_POST['username']) && !empty($_POST['lastname']) && !empty($_POST['fisrtsname']) && !empty($_POST['birthdate']) && !empty($_POST['gender']) && !empty($_POST['weight']) && !empty($_POST['height']) && !empty($_POST['sportiveActivity'])) {
+if (!empty($_POST)) {
     $usernameModif = $_POST['username'];
     // $password = $_POST['passwordModif'];
     $lastnameModif = $_POST['lastname'];
@@ -18,7 +18,7 @@ if (!empty($_POST) && !empty($_POST['username']) && !empty($_POST['lastname']) &
 
     if ($result === true) {
         $profile = allInformationsUser();
-        require './../views/profileView.php';
+        require './../views/homePageView.php';
     } else {
         echo "<p> Une erreur est survenue</p>";
     }
