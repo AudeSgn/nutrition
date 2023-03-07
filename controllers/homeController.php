@@ -6,7 +6,8 @@ $user = (new User())->getUserDatabyId($_SESSION["auth"]["id"])[0];
 $weight = $user['weight'];
 $size = $user['size'];
 $today = date("y-m-d");
-$age = date_diff(date_create($user['birthdate']), date_create($today))->format("%y");
+
+$age = date_diff(date_create($user['birthdate']), date_create($today))->format('%y');
 $sex = $user['sex'];
 $sportiveActivity = $user['sportive_activity'];
 

@@ -3,9 +3,7 @@ $title = 'Meals History';
 
 ob_start(); ?>
 <h2>Historique des repas</h2>
-<a href="../controllers/homeController.php">
-  <i class="bi bi-arrow-left-circle-fill"></i>
-</a>
+
 <?php foreach ($meals as $meal) :
   echo '<div class="containerTable">
         <table class="oneDayOfMeals">

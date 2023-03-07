@@ -1,7 +1,6 @@
 /* FORM */
 
 #containerForm {
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items:center;
@@ -10,19 +9,25 @@
 
 .inline {
     display: flex;
-    margin :1em;
+    flex-direction: column;
+    align-items: flex-start;
+    /* margin :1em; */
     font-family: 'Biryani', sans-serif;
 }
 
 .formElement {
     /* width: 50%; */
-    display: block;
+    display: flex;
     margin:1em;
+    justify-content: space-between;
 }
 
-#radio {
-    display: flex;
-    flex-direction: column;
+.selectInput{
+display: flex;
+margin : 1em;
+width:100%;
+justify-content: space-between;
+align-items: center;
 }
 
 .input {
@@ -44,7 +49,6 @@
     display: flex;
     flex-direction: column;
     padding : 0.5em;
-    height : 50px;
     justify-content: space-between;
     text-align: center;
     align-items: center;
@@ -64,7 +68,7 @@
 
 /* Responsive -> towards desktop */
 
-@media screen and (min-width:640px) {
+@media screen and (min-width:768px) {
 
     #profileForm {
         display: flex;
@@ -72,15 +76,23 @@
     }
 
     button {
-       width:60%;
+       width:90%;
     }
 
     #deleteBtn {
-        width:70%;
+        width:100%;
     }
 
     .bottomForm {
         height : 80px; 
     }
+    
+} 
+
+@media screen and (min-width:1024px) {
+
+.responsive3lines {
+    display: flex;
+}
     
 } 
