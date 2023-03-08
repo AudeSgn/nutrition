@@ -7,9 +7,9 @@ ob_start();
     <i class="bi bi-arrow-left-circle-fill"></i>
 </a>
 <div id="containerForm">
-
     <form action="../controllers/updateProfileController.php" method="post" id="profileForm">
-        <div class="responsive3lines">
+        <div class="responsiveLines">
+
             <div class="inline">
                 <div>
                     <label for="username" class="formElement"> Identifiant <i class="bi bi-pencil-fill"></i></label>
@@ -44,17 +44,18 @@ ob_start();
                     </label>
                 </div>
             </div>
-
-            <div class="responsive3lines">
-                <div class="inline">
-                    <div>
-                        <label for="weight" class="formElement"> Poids (kgs) <i class="bi bi-pencil-fill"></i></label>
-                        <input readonly="readonly" type="number" name="weight" value="<?= $weight ?>" class="formElement input">
-                    </div>
-                    <div>
-                        <label for="height" class="formElement"> Taille (cm) <i class="bi bi-pencil-fill"></i> </label>
-                        <input readonly="readonly" type="number" name="height" value="<?= $size ?>" class="formElement input">
-                    </div>
+        </div>
+        <div>
+            <div class="inline">
+                <div>
+                    <label for="weight" class="formElement"> Poids (kgs) <i class="bi bi-pencil-fill"></i></label>
+                    <input readonly="readonly" type="number" name="weight" placeholder="<?= $weight ?>" class="formElement input">
+                </div>
+                <div>
+                    <label for="height" class="formElement"> Taille (cm) <i class="bi bi-pencil-fill"></i> </label>
+                    <input readonly="readonly" type="number" name="height" placeholder="<?= $size ?>" class="formElement input">
+                </div>
+           
             </div>
             <div class="inline">
                 <div>
@@ -67,11 +68,11 @@ ob_start();
                     </label>
                 </div>
             </div>
+
             <div class="bottomForm">
                 <button class="button" type="submit" id="profileSubmitBtn"> Valider </button>
                 <a id="deleteBtn" href="#" onclick="return confirm('La suppression de votre compte est définitive. Confirmez-vous cette opération ?')"> Supprimer mon compte </a>
             </div>
-
         </div>
 
     </form>
