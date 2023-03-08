@@ -101,11 +101,11 @@ ob_start(); ?>
           <input type="hidden" id="typeOfMeal" name="typeOfMeal">
           <div id="numberOfCalories">
             <label for="numberCaloriesForm" class="form-label">Nombre de calories</label>
-            <div class="erreur"></div>
-            <input type="text" class="form-control mb-4" id="numberCaloriesForm" name="calories" placeholder="Indique le nombre de calories de ton repas" required value="" />
+
+            <input type="text" class="form-control mb-4" id="numberCaloriesForm" name="calories" placeholder="Indique le nombre de calories de ton repas" required value="<?php echo $meal_type ?>" />
+
           </div>
           <div id="mealDetails">
-            <div class="erreur"></div>
             <label for="mealDescriptionForm" class="form-label">Décris ton repas</label>
             <textarea type="text" class="form-control" id="mealDescriptionForm" name="details" placeholder="Décris ton repas" required value="<?php echo $meal_details ?>"></textarea>
           </div>
