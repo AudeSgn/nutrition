@@ -11,7 +11,7 @@ fetch("http://127.0.0.1/controllers/graphicController.php", {
           labels: ["1", "2", "3","4", "5", "6","7", "8", "9", "10"],
           datasets: [
             {
-              label: "# of Votes",
+              label: "Historique calories",
               data: result,
               backgroundColor: ["rgba(255, 99, 132, 0.2)"],
               borderWidth: 1,

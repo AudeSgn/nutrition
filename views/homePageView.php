@@ -50,10 +50,11 @@ ob_start(); ?>
       </div>
     </div>
 
-    <div id="graphCalories">
+    
+  </div>
+  <div id="graphCalories">
       <canvas class="barCanvas" aria-label="chart"></canvas>
     </div>
-  </div>
   <div id="historic">
 
     <a href="../controllers/displayMealController.php?action=displayMeals">

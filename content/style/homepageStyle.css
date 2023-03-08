@@ -93,12 +93,9 @@ p {
 }
 
 /* ......................................graphic */
-/* #graphCalories {
-      width: 264px;
-      height: 167px;
-      left: 50px;
-      top: 544px;
-    } */
+#graphCalories {
+      width: 500px;
+}
 
 /* .....................................Bouton historique */
 #historic {
