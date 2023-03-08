@@ -2,9 +2,8 @@
 $title = 'Profile';
 ob_start(); ?>
 <div id="containerForm">
-
     <form action="<?php echo "./controllers/updateProfileController.php?action=updateProfileInformations" ?>" id="profileForm">
-        <div class="responsive3lines">
+        <div class="responsiveLines">
             <div class="inline">
                 <div>
                     <label for="username" class="formElement"> Identifiant <i class="bi bi-pencil-fill"></i></label>
@@ -39,7 +38,7 @@ ob_start(); ?>
                 </div>
             </div>
         </div>
-        <div class="responsive2Lines">
+        <div>
             <div class="inline">
                 <div>
                     <label for="weight" class="formElement"> Poids (kgs) <i class="bi bi-pencil-fill"></i></label>
@@ -61,11 +60,11 @@ ob_start(); ?>
                     </label>
                 </div>
             </div>
+
             <div class="bottomForm">
                 <button class="button" type="submit" id="profileSubmitBtn"> Valider </button>
                 <a id="deleteBtn" href="#" onclick="return confirm('La suppression de votre compte est définitive. Confirmez-vous cette opération ?')"> Supprimer mon compte </a>
             </div>
-
         </div>
     </form>
 </div>

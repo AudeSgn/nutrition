@@ -13,11 +13,10 @@ function modifyMeal()
     $meal_id = $_GET['mealno'];
     if (!empty($_POST)) {
         $meal_date = $_POST['dateModif'];
-        $meal_type = $_POST['typeModif'];
         $meal_calories = $_POST['caloriesModif'];
         $meal_description = $_POST['descriptionModif'];
 
-        $result = getModifyMeal($meal_id, $meal_date, $meal_type, $meal_calories, $meal_description);
+        $result = getModifyMeal($meal_id, $meal_date, $meal_calories, $meal_description);
 
         if ($result === true) {
             $meals = getAllMeals($_SESSION["auth"]["id"]);

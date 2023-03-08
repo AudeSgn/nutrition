@@ -19,7 +19,8 @@ function setInformationsMeal($meal_type, $calories, $meal_details, $meal_date, $
 function getAllMeals()
 {
     $pdo = getConnection();
-    $query = $pdo->prepare("SELECT * FROM meal WHERE user_id=?");
+    $query = $pdo->prepare("SELECT * FROM meal WHERE user_id=?
+    ORDER BY meal_date asc");
     $query->execute(array($_SESSION["auth"]["id"]));
     $meals = $query->fetchAll();
     return $meals;
@@ -35,10 +36,10 @@ function getDeleteMeal($meal_id)
     return $result;
 }
 
-function getModifyMeal($meal_id, $meal_date, $meal_type, $meal_calories, $meal_description)
+function getModifyMeal($meal_id, $meal_date, $meal_calories, $meal_description)
 {
     $pdo = getConnection();
-    $query = $pdo->prepare("UPDATE meal  SET meal_type=?, calories=?, meal_details=?, meal_date=? WHERE meal_id=?");
-    $result = $query->execute(array($meal_type, $meal_calories, $meal_description, $meal_date, $meal_id));
+    $query = $pdo->prepare("UPDATE meal  SET calories=?, meal_details=?, meal_date=? WHERE meal_id=?");
+    $result = $query->execute(array($meal_calories, $meal_description, $meal_date, $meal_id));
     return $result;
 };

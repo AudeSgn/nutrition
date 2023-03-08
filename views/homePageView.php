@@ -91,7 +91,7 @@ ob_start(); ?>
         <div id="mealModalTitle"></div>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <?php echo $message ?>
+
       <form action="<?php echo "../controllers/addMealController.php?action=createMeal" ?>" method="post">
         <div class="modalMeal-body">
           <div id="inputDate">
@@ -102,7 +102,7 @@ ob_start(); ?>
           <div id="numberOfCalories">
             <label for="numberCaloriesForm" class="form-label">Nombre de calories</label>
             <div class="erreur"></div>
-            <input type="text" class="form-control mb-4" id="numberCaloriesForm" name="calories" placeholder="Indique le nombre de calories de ton repas" required value="<?php echo $meal_type ?>" />
+            <input type="text" class="form-control mb-4" id="numberCaloriesForm" name="calories" placeholder="Indique le nombre de calories de ton repas" required value="" />
           </div>
           <div id="mealDetails">
             <div class="erreur"></div>

@@ -72,7 +72,6 @@ align-items: center;
 
     #profileForm {
         display: flex;
-        margin: 3em;
     }
 
     button {
@@ -82,17 +81,13 @@ align-items: center;
     #deleteBtn {
         width:100%;
     }
-
-    .bottomForm {
-        height : 80px; 
-    }
-    
 } 
 
-@media screen and (min-width:1024px) {
+/* @media screen and (min-width:1024px) {
 
-.responsive3lines {
+.responsiveLines {
     display: flex;
+    
 }
     
-} 
+}  */
