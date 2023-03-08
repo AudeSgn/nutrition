@@ -21,7 +21,8 @@ function validateMealInfoForm() {
   }
 }
 
-// Indiquer si l'IMC est
+// Indiquer si l'IMC est 
+
 $bmiType = document.querySelector("#imcType");
 $bmi = document.querySelector("#imcNumber").innerHTML;
 
