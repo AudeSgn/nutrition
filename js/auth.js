@@ -1,3 +1,4 @@
+console.log("hello");
 const container = document.getElementById("container");
 const loginButton = document.getElementById("login");
 const signUpButton = document.getElementById("signUp");
