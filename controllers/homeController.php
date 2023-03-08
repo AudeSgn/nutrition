@@ -1,5 +1,15 @@
 <?php
 
+require_once "./../models/userModel.php";
+session_start();
+$user = (new User())->getUserDatabyId($_SESSION["auth"]["id"])[0];
+$weight = $user['weight'];
+$size = $user['size'];
+$today = date("y-m-d");
+
+$age = date_diff(date_create($user['birthdate']), date_create($today))->format('%y');
+$sex = $user['sex'];
+$sportiveActivity = $user['sportive_activity'];
 
 function calculCalorie($weight, $size, $age, $sex, $sportiveActivity)
 {
@@ -20,15 +30,16 @@ function calculCalorie($weight, $size, $age, $sex, $sportiveActivity)
     } else {
         $result *= 1.725;
     }
-    return $result;
+    return round($result);
 }
 
+$_SESSION["auth"]["calories"] = calculCalorie($weight, $size, $age, $sex, $sportiveActivity);
 
-function createMeal()
+function BMIcalc($weight, $size)
 {
-    if (!empty($_POST)) {
-        $calories = $_POST['calories'];
-        $meal_details = $_POST['details'];
-        $result = getInformationsMeal($calories, $meal_details);
-    }
+    $bmi = $weight / (($size / 100) * ($size / 100));
+    return round($bmi);
 }
+
+$_SESSION["auth"]["bmi"] = BMIcalc($weight, $size);
+header('Location: ../views/homePageView.php');

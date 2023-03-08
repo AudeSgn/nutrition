@@ -1,6 +1,2 @@
 <?php
-include('./views/homePageView.php');
-
-if ($_GET['action'] == 'createMeal') {
-    createMeal();
-};
+header('Location: ./views/authView.php');

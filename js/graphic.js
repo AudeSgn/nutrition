@@ -1,27 +1,36 @@
-var ctx = document.getElementById("barCanvas").getContext("2d");
-new Chart(ctx, {
-  type: "bar",
-  data: {
-    labels: ["Red", "Blue", "Yellow"],
-    datasets: [
-      {
-        label: "# of Votes",
-        data: [12, 19, 3, 5, 2, 3],
-        backgroundColor: ["rgba(255, 99, 132, 0.2)"],
-        borderWidth: 1,
-      },
-    ],
-  },
+var ctx = document.getElementsByClassName("barCanvas");
 
-  options: {
-    scales: {
-      yAxes: [
-        {
-          ticks: {
-            beginAtZero: true,
+fetch("http://127.0.0.1/controllers/graphicController.php", {
+    method: "GET"
+}).then(async (res)=> {
+    const result = await res.json()
+    console.log(result)
+    new Chart(ctx, {
+        type: "bar",
+        data: {
+          labels: ["1", "2", "3","4", "5", "6","7", "8", "9", "10"],
+          datasets: [
+            {
+              label: "# of Votes",
+              data: result,
+              backgroundColor: ["rgba(255, 99, 132, 0.2)"],
+              borderWidth: 1,
+            },
+          ],
+        },
+      
+        options: {
+          scales: {
+            yAxes: [
+              {
+                ticks: {
+                  beginAtZero: true,
+                },
+              },
+            ],
           },
         },
-      ],
-    },
-  },
-});
+      });
+      
+})
+
