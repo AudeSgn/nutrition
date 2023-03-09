@@ -13,7 +13,7 @@ fetch("http://127.0.0.1/controllers/graphicController.php", {
             {
               label: "Historique calories",
               data: result,
-              backgroundColor: ["rgba(255, 99, 132, 0.2)"],
+              backgroundColor: ["black", "black", "black", "black", "black", "black", "black", "black", "black", "black"],
               borderWidth: 1,
             },
           ],
