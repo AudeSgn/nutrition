@@ -66,26 +66,24 @@
 
 /* Responsive -> towards desktop */
 
-@media screen and (min-width:768px) {
-
-    #profileForm {
-        display: flex;
-    }
-
-    button {
-       width:90%;
-    }
-
-    #deleteBtn {
-        width:100%;
-    }
-} 
-
-/* @media screen and (min-width:1024px) {
-
-.responsiveLines {
+@media screen and (min-width: 768px) {
+  #profileForm {
     display: flex;
-    
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  button {
+    width: 90%;
+  }
+
+  #deleteBtn {
+    width: 100%;
+  }
 }
-    
-}  */
+
+/* @media screen and (min-width: 1024px) {
+  .responsiveLines {
+    display: flex;
+  }
+} */

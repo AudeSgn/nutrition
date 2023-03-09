@@ -54,6 +54,7 @@ ob_start();
                     <input readonly="readonly" type="number" name="height" placeholder="<?= $size ?>" class="formElement input">
                 </div>
 
+
             </div>
             <div class="inline">
                 <div>

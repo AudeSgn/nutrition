@@ -51,19 +51,17 @@ ob_start();
       </div>
     </div>
 
-
+    <div id="graphCalories">
+      <canvas class="barCanvas" aria-label="chart"></canvas>
+      <div id="historic">
+        <a href="../controllers/displayMealController.php?action=displayMeals">
+          <button type="button" name="btnHistoric" id="btnHistoric">Voir mes repas</button>
+        </a>
+      </div>
+    </div>
   </div>
-  <div id="graphCalories">
-    <canvas class="barCanvas" aria-label="chart">
-    </canvas>
-  </div>
-  <div id="historic">
 
-    <a href="../controllers/displayMealController.php?action=displayMeals">
 
-      <button type="button" name="btnHistoric" id="btnHistoric">Voir mes repas</button>
-    </a>
-  </div>
 </div>
 
 <!-- ..............................Modal IMC-->
@@ -105,12 +103,12 @@ ob_start();
           <div id="numberOfCalories">
             <label for="numberCaloriesForm" class="form-label">Nombre de calories</label>
 
-            <input type="text" class="form-control mb-4" id="numberCaloriesForm" name="calories" placeholder="Indique le nombre de calories de ton repas" required value="" />
+            <input type="text" class="form-control mb-4" id="numberCaloriesForm" name="calories" placeholder="Indique le nombre de calories de ton repas" required />
 
           </div>
           <div id="mealDetails">
             <label for="mealDescriptionForm" class="form-label">Décris ton repas</label>
-            <textarea type="text" class="form-control" id="mealDescriptionForm" name="details" placeholder="Décris ton repas" required value="<?php echo $meal_details ?>"></textarea>
+            <textarea type="text" class="form-control" id="mealDescriptionForm" name="details" placeholder="Décris ton repas" required></textarea>
           </div>
         </div>
         <div class="modal-footer border border-0">

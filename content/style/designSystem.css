@@ -1,31 +1,30 @@
 /* BODY */
 body {
-  margin:auto;
+  margin: auto;
   overflow-x: hidden;
-    background-color: #fffafa;
-    width: 100vw;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: url('../../assets/img/blob-scene-haikei.svg') center center no-repeat;
-    background-size: cover;
+  background-color: #fffafa;
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url("../../assets/img/blob-scene-haikei.svg") center center no-repeat;
+  background-size: cover;
 }
- 
-  #content {
-    /* overflow-y: scroll; */
-    display: flex;
-    flex-direction: column;
-  }
 
+#content {
+  /* overflow-y: scroll; */
+  display: flex;
+  flex-direction: column;
+}
 
 #content {
   width: 100%;
   overflow-y: scroll;
   display: flex;
   flex-direction: column;
-  margin-top: 20vh;
+  margin-top: 5vh;
 }
 
 #returnBtn {
@@ -36,21 +35,14 @@ body {
 /* HEADER */
 
 #header {
-    width: 90%;
-    display: flex;
-    justify-content: space-between;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
 }
 
 #header img {
   width: 150px;
 }
-
-/*.container1 {
-  position: relative;
-  width: 100%;
-  background: url("../../assets/img/blob-scene-haikei.svg") center center no-repeat;
-  background-size: cover;
-}*/
 
 #logoHello {
   display: flex;
@@ -95,43 +87,41 @@ body {
 }
 
 select {
-    background-color: #DC776F;
-    border-radius: 15px;
-    width : 120px;
-    height:50px;
+  background-color: #dc776f;
+  border-radius: 15px;
+  width: 120px;
+  height: 50px;
 }
 
 /* FOOTER */
 
 #footer {
-    width:100%;
-    display: flex;
-    text-align: flex-end;
-    justify-content: center;
-    font-family: 'titillium', sans-serif;
-    font-size: 12px;
+  width: 100%;
+  display: flex;
+  text-align: flex-end;
+  justify-content: center;
+  font-family: "titillium", sans-serif;
+  font-size: 12px;
 }
 
 /* RESPONSIVE -> TOWARDS DESKTOP */
-   
 
-@media screen and (min-width:768px) {
- 
-    #hello {
-        font-size: 20px;
-    }
-    
-    .containerTable {
-        flex-direction: row;
-    }
-    #footer {
-        font-size: 16px;
-    }
- 
-#header img {
+@media screen and (min-width: 768px) {
+  #hello {
+    font-size: 20px;
+  }
+
+  .containerTable {
+    flex-direction: row;
+  }
+  #footer {
+    font-size: 16px;
+  }
+
+  #header img {
     width: 200px;
+  }
 }
-
 @media screen and (min-width: 768px) {
   #hello {
     font-size: 20px;
@@ -145,7 +135,7 @@ select {
   }
   #content {
     overflow-y: hidden;
-    margin-top: 15vh;
+    /* width: 100%; */
   }
 
   #header img {

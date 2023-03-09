@@ -1,6 +1,7 @@
 var ctx = document.getElementsByClassName("barCanvas");
-
-fetch("http://localhost:8888/Brief06/controllers/graphicController.php", {
+// Colas:
+// "http://localhost:8888/Brief06/controllers/graphicController.php"
+fetch("http://localhost/brief6_Nutrition/controllers/graphicController.php", {
   method: "GET",
 }).then(async (res) => {
   const result = await res.json();
