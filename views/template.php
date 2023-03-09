@@ -21,16 +21,18 @@
 </head>
 
 <body>
-
     <header id="header">
         <div id="logoHello">
             <a href="./../controllers/homeController.php">
                 <img src="./../assets/img/logo_nutri_watch.png" alt="NutriWatch logo">
             </a>
             <h1 id="hello">Hello, <?= $_SESSION["auth"]["username"] ?></h1>
-            <a href="../controllers/homeController.php">
+            <?php if ($title != 'Homepage') {
+                echo '<a href="../controllers/homeController.php">
                 <i class="bi bi-arrow-left-circle-fill" id="returnBtn"></i>
-            </a>
+            </a>';
+            }
+            ?>
         </div>
         <div id="icons">
             <a href="./../controllers/displayProfileController.php">
@@ -42,7 +44,6 @@
         </div>
     </header>
     <div id="content">
-
         <?= $content ?>
     </div>
 
@@ -54,7 +55,7 @@
     <script src="../js/profile.js"></script>
     <script src="../js/meal.js"></script>
     <script src="../js/auth.js"></script>
-    <script src="./../js/graphic.js"></script>
+    <script src="../js/graphic.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 

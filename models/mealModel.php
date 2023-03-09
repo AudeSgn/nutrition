@@ -31,8 +31,8 @@ function getAllMealsByID($id)
     $pdo = getConnection();
     $query = $pdo->prepare("SELECT * FROM meal WHERE user_id=?");
     $query->execute(array($id));
-    $meals = $query->fetchAll();
-    return $meals;
+    $mealz = $query->fetchAll();
+    return $mealz;
 }
 
 
