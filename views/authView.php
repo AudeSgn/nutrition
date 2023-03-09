@@ -13,9 +13,7 @@
 <body>
     <div class="container" id="container">
         <div class="form-container sign-up-container">
-
-            <form action="../controllers/addUserController.php" method="post">
-
+            <form action="#">
 
                 <h1>Créer un compte</h1>
                 <div class="social-container">
@@ -25,27 +23,18 @@
                 </div>
                 <span>Utiliser un compte gmail</span>
                 <div class="scroller">
-                    <input type="text" name="lastname" placeholder="Nom">
-                    <input type="text" name="firstname" placeholder="Prénom">
-                    <input type="text" name="username" placeholder="Nom d'utilisateur">
-                    <input type="password" name="password" placeholder=" Nouveau mot de passe">
-                    <input type="text" name="size" placeholder="Taille(cm)">
-                    <input type="text" name="weight" placeholder="Poids(kg)">
-                    <input id="date" name="birthdate" type="date" value="Date de naissance">
-                    <div class="activity-container">
-                        <select id="activity-options" name="sportive_activity">
-                            <option name="sportive_activity" value="0">--Niveau d'activité--</option>
-                            <option name="sportive_activity" value="1">Inactif</option>
-                            <option name="sportive_activity" value="2">Modérément actif</option>
-                            <option name="sportive_activity" value="3">Très actif</option>
-                        </select>
-                    </div>
-
+                    <input type="text" placeholder="Nom">
+                    <input type="text" placeholder="Prénom">
+                    <input type="text" placeholder="Nom d'utilisateur">
+                    <input type="password" placeholder="Nouveau mot de passe">
+                    <input type="text" placeholder="Taille(cm)">
+                    <input type="text" placeholder="Poids(kg)">
+                    <input id="date" type="date" value="Date de naissance">
                     <div class="sexe">
                         <label>Femme</label>
-                        <input type="radio" name="sex" value="1">
+                        <input type="radio" name=" genre">
                         <label>Homme</label>
-                        <input type="radio" name="sex" value="0">
+                        <input type="radio" name=" genre">
                     </div>
 
                     <button id="btn-sign"> Créer le compte</button>
@@ -61,7 +50,8 @@
                     <a href="#"><i class="fab fa-linkedin-in"></i></a>
                 </div>
                 <span>Je n'ai pas de compte</span>
-                <?php if (isset($_SESSION["error"]["id"])) { ?>
+                <?php session_start();
+                if (isset($_SESSION["error"]["id"])) {?>
                 <label for="error_id" class="error"><?= $_SESSION["error"]["id"] ?></label>
                 <?php } ?>
                 <input type="text" name="username" placeholder="identifiant">

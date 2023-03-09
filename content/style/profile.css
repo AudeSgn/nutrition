@@ -1,86 +1,89 @@
 /* FORM */
 
 #containerForm {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items:center;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .inline {
-    display: flex;
-    margin :1em;
-    font-family: 'Biryani', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* margin :1em; */
+  font-family: "Biryani", sans-serif;
 }
 
 .formElement {
-    /* width: 50%; */
-    display: block;
-    margin:1em;
+  /* width: 50%; */
+  display: flex;
+  margin: 1em;
+  justify-content: space-between;
 }
 
-#radio {
-    display: flex;
-    flex-direction: column;
+.selectInput {
+  display: flex;
+  margin: 1em;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .input {
-    border : none;
-    border-bottom : solid 1px #DC776F;
-    margin-right: 1em;
-    background-color: rgba(128, 128, 128, 0.18);
+  border: none;
+  border-bottom: solid 1px #dc776f;
+  margin-right: 1em;
+  background-color: rgba(128, 128, 128, 0.18);
 }
 
-.bi-pencil-fill{
-   display: flex !important;
+.bi-pencil-fill {
+  display: flex !important;
 }
 
-.bi-pencil-fill:hover{
-    cursor: pointer !important;
+.bi-pencil-fill:hover {
+  cursor: pointer !important;
 }
 
 .bottomForm {
-    display: flex;
-    flex-direction: column;
-    padding : 0.5em;
-    height : 50px;
-    justify-content: space-between;
-    text-align: center;
-    align-items: center;
-   
+  display: flex;
+  flex-direction: column;
+  padding: 0.5em;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
 }
 
 #deleteBtn {
-    width:96%;
-    text-decoration: none;
-    color : #DC776F;
-    font-style: italic;
+  width: 96%;
+  text-decoration: none;
+  color: #dc776f;
+  font-style: italic;
 }
 
 #profileSubmitBtn {
-    width:60%;
+  width: 60%;
 }
 
 /* Responsive -> towards desktop */
 
-@media screen and (min-width:640px) {
+@media screen and (min-width: 768px) {
+  #profileForm {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
 
-    #profileForm {
-        display: flex;
-        margin: 3em;
-    }
+  button {
+    width: 90%;
+  }
 
-    button {
-       width:60%;
-    }
+  #deleteBtn {
+    width: 100%;
+  }
+}
 
-    #deleteBtn {
-        width:70%;
-    }
-
-    .bottomForm {
-        height : 80px; 
-    }
-    
-} 
+/* @media screen and (min-width: 1024px) {
+  .responsiveLines {
+    display: flex;
+  }
+} */

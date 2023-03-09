@@ -52,15 +52,15 @@ ob_start(); ?>
 
     <div id="graphCalories">
       <canvas class="barCanvas" aria-label="chart"></canvas>
+      <div id="historic">
+        <a href="../controllers/displayMealController.php?action=displayMeals">
+          <button type="button" name="btnHistoric" id="btnHistoric">Voir mes repas</button>
+        </a>
+      </div>
     </div>
   </div>
-  <div id="historic">
 
-    <a href="../controllers/displayMealController.php?action=displayMeals">
 
-      <button type="button" name="btnHistoric" id="btnHistoric">Voir mes repas</button>
-    </a>
-  </div>
 </div>
 
 <!-- ..............................Modal IMC-->
@@ -91,7 +91,7 @@ ob_start(); ?>
         <div id="mealModalTitle"></div>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <?php echo $message ?>
+
       <form action="<?php echo "../controllers/addMealController.php?action=createMeal" ?>" method="post">
         <div class="modalMeal-body">
           <div id="inputDate">
@@ -101,13 +101,13 @@ ob_start(); ?>
           <input type="hidden" id="typeOfMeal" name="typeOfMeal">
           <div id="numberOfCalories">
             <label for="numberCaloriesForm" class="form-label">Nombre de calories</label>
-            <div class="erreur"></div>
-            <input type="text" class="form-control mb-4" id="numberCaloriesForm" name="calories" placeholder="Indique le nombre de calories de ton repas" required value="<?php echo $meal_type ?>" />
+
+            <input type="text" class="form-control mb-4" id="numberCaloriesForm" name="calories" placeholder="Indique le nombre de calories de ton repas" required />
+
           </div>
           <div id="mealDetails">
-            <div class="erreur"></div>
             <label for="mealDescriptionForm" class="form-label">Décris ton repas</label>
-            <textarea type="text" class="form-control" id="mealDescriptionForm" name="details" placeholder="Décris ton repas" required value="<?php echo $meal_details ?>"></textarea>
+            <textarea type="text" class="form-control" id="mealDescriptionForm" name="details" placeholder="Décris ton repas" required></textarea>
           </div>
         </div>
         <div class="modal-footer border border-0">

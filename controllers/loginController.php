@@ -1,7 +1,5 @@
 <?php
 require "./../models/userModel.php";
-
-
 if (isset($_POST["username"]) && isset($_POST["password"])) {
     $username = $_POST["username"];
     $user = new User();
