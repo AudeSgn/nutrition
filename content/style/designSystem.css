@@ -24,7 +24,7 @@ body {
   overflow-y: scroll;
   display: flex;
   flex-direction: column;
-  margin-top: 20vh;
+  margin-top: 5vh;
 }
 
 #returnBtn {
@@ -44,13 +44,7 @@ body {
   width: 150px;
 }
 
-/* .container1 {
-  position: relative;
-  width: 100%;
-  /* background: url("../../assets/img/blob-scene-haikei.svg") center center no-repeat; */
-/* background-size: cover;
-} */
-*/ #logoHello {
+#logoHello {
   display: flex;
   flex-direction: column;
   margin-left: 5px;
@@ -141,7 +135,7 @@ select {
   }
   #content {
     overflow-y: hidden;
-    margin-top: 15vh;
+    /* width: 100%; */
   }
 
   #header img {
