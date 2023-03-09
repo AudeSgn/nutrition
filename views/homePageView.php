@@ -1,7 +1,8 @@
 <?php
 $title = 'Homepage';
 session_start();
-ob_start(); ?>
+ob_start();
+?>
 <div class="container">
   <div id="buttonsRound">
     <div id="btnImc">
@@ -50,11 +51,12 @@ ob_start(); ?>
       </div>
     </div>
 
-    
+
   </div>
   <div id="graphCalories">
-      <canvas class="barCanvas" aria-label="chart"></canvas>
-    </div>
+    <canvas class="barCanvas" aria-label="chart">
+    </canvas>
+  </div>
   <div id="historic">
 
     <a href="../controllers/displayMealController.php?action=displayMeals">
@@ -103,7 +105,7 @@ ob_start(); ?>
           <div id="numberOfCalories">
             <label for="numberCaloriesForm" class="form-label">Nombre de calories</label>
 
-            <input type="text" class="form-control mb-4" id="numberCaloriesForm" name="calories" placeholder="Indique le nombre de calories de ton repas" required value="<?php echo $meal_type ?>" />
+            <input type="text" class="form-control mb-4" id="numberCaloriesForm" name="calories" placeholder="Indique le nombre de calories de ton repas" required value="" />
 
           </div>
           <div id="mealDetails">
@@ -136,7 +138,7 @@ ob_start(); ?>
   </div>
 
 </div>
-
-<?php $content = ob_get_clean();
+<?php
+$content = ob_get_clean();
 require 'template.php';
 ?>

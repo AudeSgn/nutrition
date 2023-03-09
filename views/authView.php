@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, instial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./../content/style/auth.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
@@ -51,9 +51,9 @@
                 </div>
                 <span>Je n'ai pas de compte</span>
                 <?php session_start();
-                if (isset($_SESSION["error"]["id"])) {?>
-                <label for="error_id" class="error"><?= $_SESSION["error"]["id"] ?></label>
-                <?php } ?>
+                if (isset($_SESSION["error"]["id"])) {
+                    echo '<label for="error_id" class="error">' . $_SESSION["error"]["id"] . '</label>';
+                } ?>
                 <input type="text" name="username" placeholder="identifiant">
                 <input type="password" name="password" placeholder="mot de passe">
                 <input type="submit" value="Se connecter">

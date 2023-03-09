@@ -1,5 +1,4 @@
 <?php
-
 include "./../models/mealModel.php";
 if (true) {
     session_start();
