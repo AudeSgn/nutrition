@@ -42,4 +42,5 @@ function BMIcalc($weight, $size)
 }
 
 $_SESSION["auth"]["bmi"] = BMIcalc($weight, $size);
+
 header('Location: ../views/homePageView.php');

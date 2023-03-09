@@ -3,9 +3,7 @@ $title = 'Profile';
 
 ob_start();
 ?>
-<a href="../controllers/homeController.php">
-    <i class="bi bi-arrow-left-circle-fill"></i>
-</a>
+
 <div id="containerForm">
     <form action="../controllers/updateProfileController.php" method="post" id="profileForm">
         <div class="responsiveLines">
@@ -55,7 +53,8 @@ ob_start();
                     <label for="height" class="formElement"> Taille (cm) <i class="bi bi-pencil-fill"></i> </label>
                     <input readonly="readonly" type="number" name="height" placeholder="<?= $size ?>" class="formElement input">
                 </div>
-           
+
+
             </div>
             <div class="inline">
                 <div>
