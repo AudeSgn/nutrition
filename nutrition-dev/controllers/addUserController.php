@@ -22,11 +22,10 @@ function createUser()
     $sportive_activity = $_POST['sportive_activity'];
     $sex = $_POST['sex'];
     $user_id = 1;
- 
 
-    // var_dump($_POST);
+    var_dump($_POST['sportive_activity']);
 
-    $result = setCreateUser($lastname, $firstname, $username, $password, $size, $weight, $birthdate,  $sportive_activity , $sex, $user_id);
+    $result = setCreateUser($lastname, $firstname, $username, $password, $size, $weight, $birthdate,  $sportive_activity, $sex, $user_id);
 
     if ($result === true) {
 

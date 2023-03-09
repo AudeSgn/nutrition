@@ -33,11 +33,11 @@
                     <input type="text" name="weight" placeholder="Poids(kg)">
                     <input id="date" name="birthdate" type="date" value="Date de naissance">
                     <div class="activity-container">
-                        <select id="activity-options">
+                        <select id="activity-options" name="sportive_activity">
                             <option name="sportive_activity" value="0">--Niveau d'activité--</option>
-                            <option name="sexsportive_activity" value="1">Inactif</option>
-                            <option name="sexsportive_activity" value="2">Modérément actif</option>
-                            <option name="sexsportive_activity" value="3">Très actif</option>
+                            <option name="sportive_activity" value="1">Inactif</option>
+                            <option name="sportive_activity" value="2">Modérément actif</option>
+                            <option name="sportive_activity" value="3">Très actif</option>
                         </select>
                     </div>
 
