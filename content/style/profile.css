@@ -66,20 +66,21 @@
 
 /* Responsive -> towards desktop */
 
-@media screen and (min-width:768px) {
+@media screen and (min-width: 768px) {
+  #profileForm {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
 
-    #profileForm {
-        display: flex;
-    }
+  button {
+    width: 90%;
+  }
 
-    button {
-       width:90%;
-    }
-
-    #deleteBtn {
-        width:100%;
-    }
-} 
+  #deleteBtn {
+    width: 100%;
+  }
+}
 
 /* @media screen and (min-width:1024px) {
 

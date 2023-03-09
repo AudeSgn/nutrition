@@ -94,7 +94,8 @@ p {
 
 /* ......................................graphic */
 #graphCalories {
-      width: 500px;
+  width: auto;
+  margin-right: 1vw;
 }
 
 /* .....................................Bouton historique */
@@ -179,15 +180,12 @@ p {
     font-size: 13px;
   }
 
-  #desktopVersion {
-    display: flex;
-    justify-content: center;
-  }
   /* ..............................................boutons IMC et calories */
 
   #buttonsRound {
     columns: 2;
     justify-content: flex-start;
+    margin-left: 8vw;
   }
 
   #btnImc {
@@ -196,14 +194,12 @@ p {
     text-align: center;
     margin-right: 70px;
     margin-left: 4px;
-    margin-top: 10vh;
   }
 
   #btnCalories {
     width: 201px;
     height: 201px;
     margin-left: 18px;
-    margin-top: 10vh;
   }
 
   .insideButtonsRound {
@@ -227,7 +223,7 @@ p {
   }
   /* .........................................MILIEU avec bouton repas et graph */
   #buttonsMeals {
-    margin-left: 8px;
+    margin-left: 3vw;
   }
   .btnMeal {
     width: 193.83px;
@@ -239,24 +235,25 @@ p {
     margin-right: 5vw;
   }
   #graphCalories {
-    margin-left: 15vw;
+    margin-bottom: 2vh;
   }
 
   /* ................Bouton historique */
   #historic {
     text-align: center;
-    margin-right: 5vw;
-    text-align: end;
+    margin-right: 10vw;
+    margin-top: 3vh;
   }
   #btnHistoric {
     width: 350px;
     height: 46px;
     font-size: 20px;
+    margin-left: 5vw;
   }
 }
 @media only screen and (min-width: 1024px) {
   #desktopVersion {
     display: flex;
-    columns: 2;
+    justify-content: flex-start;
   }
 }
