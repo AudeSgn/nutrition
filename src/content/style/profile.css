@@ -5,6 +5,10 @@
   justify-content: center;
   align-items: center;
 }
+#profileForm {
+  display: flex;
+  flex-direction: column;
+}
 
 .inline {
   display: flex;
@@ -69,8 +73,7 @@
 @media screen and (min-width: 768px) {
   #profileForm {
     display: flex;
-    flex-direction: column;
-    height: 100vh;
+    flex-direction: row;
   }
 
   button {
@@ -82,8 +85,12 @@
   }
 }
 
-/* @media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
   .responsiveLines {
     display: flex;
   }
-} */
+  #containerForm {
+   
+    min-height: 70vh;
+  }
+}

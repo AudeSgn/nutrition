@@ -1,3 +1,10 @@
+<?php
+
+    if (!isset($_SESSION["auth"]["id"])) {
+        header("Location: ./../index.php");
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

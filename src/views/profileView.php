@@ -7,7 +7,6 @@ ob_start();
 <div id="containerForm">
     <form action="../controllers/updateProfileController.php" method="post" id="profileForm">
         <div class="responsiveLines">
-
             <div class="inline">
                 <div>
                     <label for="username" class="formElement"> Identifiant <i class="bi bi-pencil-fill"></i></label>
