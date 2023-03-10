@@ -9,7 +9,7 @@ function validateMealInfoForm() {
   let mealCalories = parseInt(document.getElementById("numberCaloriesForm").value);
   let defautCalories = parseInt(document.getElementById("numberCalories").innerHTML);
   if (mealCalories > defautCalories) {
-    alert(" Tu as dépassé ton apport en calorie journalier recommandé !");
+    alert(" Tu as dépassé ton apport en calories journalier recommandé !");
   }
 }
 
