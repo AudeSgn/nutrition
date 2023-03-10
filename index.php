@@ -1,2 +1,4 @@
 <?php
-header('Location: ./views/authView.php');
+require 'vendor/autoload.php';
+header('Location: ./src/views/authView.php');
+

@@ -2,14 +2,14 @@
 require("../db/db.php");
 
 
-function setCreateUser($lastname, $firstname, $username, $password, $size, $weight, $birthdate,  $sportive_activity, $sex, $user_id)
+function setCreateUser($lastname, $firstname, $username, $password, $size, $weight, $birthdate,  $sportive_activity, $sex)
 {
 
     $db = getConnection();
 
-    $query = $db->prepare("INSERT INTO user (user_id, username, password, lastname, firstname, birthdate, sex, weight, size, sportive_activity )
-    VALUES (:user_id, :username, :password,:lastname ,:firstname ,:birthdate, :sex, :weight, :size, :sportive_activity)");
-    $query->bindParam(':user_id', $user_id);
+    $query = $db->prepare("INSERT INTO user (username, password, lastname, firstname, birthdate, sex, weight, size, sportive_activity )
+    VALUES ( :username, :password,:lastname ,:firstname ,:birthdate, :sex, :weight, :size, :sportive_activity)");
+  
     $query->bindParam(':username', $username);
     $query->bindParam(':password', $password);
     $query->bindParam(':lastname', $lastname);

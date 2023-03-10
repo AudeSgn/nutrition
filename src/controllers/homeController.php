@@ -1,5 +1,5 @@
 <?php
-
+// A commenter en cas de test
 require_once "./../models/userModel.php";
 session_start();
 $user = (new User())->getUserDatabyId($_SESSION["auth"]["id"])[0];
@@ -11,6 +11,7 @@ $age = date_diff(date_create($user['birthdate']), date_create($today))->format('
 $sex = $user['sex'];
 $sportiveActivity = $user['sportive_activity'];
 
+// A NE PAS commenter en cas de test
 function calculCalorie($weight, $size, $age, $sex, $sportiveActivity)
 {
     $resultWeight = $weight * 10;
@@ -33,14 +34,17 @@ function calculCalorie($weight, $size, $age, $sex, $sportiveActivity)
     return round($result);
 }
 
+// A commenter en cas de test
 $_SESSION["auth"]["calories"] = calculCalorie($weight, $size, $age, $sex, $sportiveActivity);
 
+// A NE PAS COMMENTER EN CAS DE TEST 
 function BMIcalc($weight, $size)
 {
     $bmi = $weight / (($size / 100) * ($size / 100));
     return round($bmi);
 }
 
+// A commenter en cas de test
 $_SESSION["auth"]["bmi"] = BMIcalc($weight, $size);
 
 header('Location: ../views/homePageView.php');
