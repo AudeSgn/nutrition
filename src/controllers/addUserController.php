@@ -28,9 +28,7 @@ function createUser()
 
     if ($result === true) {
 
-      //on se derige a la page acceuil
-    } else {
-      //sinn on se derige a la page formulaire     
+      header('Location:../../index.php');
     }
   }
 }
