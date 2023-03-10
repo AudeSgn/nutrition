@@ -16,20 +16,9 @@ fetch("http://localhost:8888/Brief06/src/controllers/graphicController.php", {
       labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
       datasets: [
         {
-          label: "Calories/jour des 10 derniers jours ",
+          label: "Calories/jour des 10 derniers jours",
           data: result,
-          backgroundColor: [
-            "#dc776f",
-            "#dc776f",
-            "#dc776f",
-            "#dc776f",
-            "#dc776f",
-            "#dc776f",
-            "#dc776f",
-            "#dc776f",
-            "#dc776f",
-            "#dc776f",
-          ],
+          backgroundColor: ["#dc776f", "#dc776f", "#dc776f", "#dc776f", "#dc776f", "#dc776f", "#dc776f", "#dc776f", "#dc776f", "#dc776f"],
           borderWidth: 1,
         },
       ],
