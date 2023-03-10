@@ -1,7 +1,7 @@
 var ctx = document.getElementsByClassName("barCanvas");
 // Colas:
 // "http://localhost:8888/Brief06/controllers/graphicController.php"
-fetch("http://localhost/brief6_Nutrition/controllers/graphicController.php", {
+fetch("http://localhost/brief6_Nutrition/src/controllers/graphicController.php", {
   method: "GET",
 }).then(async (res) => {
   const result = await res.json();
@@ -16,18 +16,7 @@ fetch("http://localhost/brief6_Nutrition/controllers/graphicController.php", {
         {
           label: "Historique calories",
           data: result,
-          backgroundColor: [
-            "#dc776f",
-            "#dc776f",
-            "#dc776f",
-            "#dc776f",
-            "#dc776f",
-            "#dc776f",
-            "#dc776f",
-            "#dc776f",
-            "#dc776f",
-            "#dc776f",
-          ],
+          backgroundColor: ["#dc776f", "#dc776f", "#dc776f", "#dc776f", "#dc776f", "#dc776f", "#dc776f", "#dc776f", "#dc776f", "#dc776f"],
           borderWidth: 1,
         },
       ],

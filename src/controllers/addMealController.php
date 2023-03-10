@@ -14,14 +14,13 @@ function createMeal()
         $calories = $_POST['calories'];
         $meal_details = $_POST['details'];
         $meal_date = $_POST['meal_date'];
-        $user_id = 1;
-        // user_id = $_SESSION["auth"]["id"]
-        // if (isset($valider)) {
-        //     if (empty($meal_type))
-        //         $message = '<div class="erreur">champs laissé vide.</div>';
-        //     elseif (empty($prenom))
-        //         $message = '<div class="erreur">Champs laissé vide.</div>';
-        // }
+        $user_id = $_SESSION["auth"]["id"];
+        if (isset($valider)) {
+            if (empty($meal_type))
+                $message = '<div class="erreur">champs laissé vide.</div>';
+            elseif (empty($prenom))
+                $message = '<div class="erreur">Champs laissé vide.</div>';
+        }
 
         $result = setInformationsMeal($meal_type, $calories, $meal_details, $meal_date, $user_id);
 
