@@ -27,10 +27,7 @@ function createUser()
     $result = setCreateUser($lastname, $firstname, $username, $password, $size, $weight, $birthdate,  $sportive_activity, $sex);
 
     if ($result === true) {
-
-      //on se derige a la page acceuil
-    } else {
-      //sinn on se derige a la page formulaire     
+      header("Location:../../index.php");
     }
   }
 }

@@ -6,22 +6,14 @@ function displayModalTitle(title) {
 
 // Afficher l'alerte quand le nombre de calories journalières dépasse celui indiqué par l'utilisateur
 function validateMealInfoForm() {
-  let mealCalories = parseInt(
-    document.getElementById("numberCaloriesForm").value
-  );
-  let defautCalories = parseInt(
-    document.getElementById("numberCalories").innerHTML
-  );
+  let mealCalories = parseInt(document.getElementById("numberCaloriesForm").value);
+  let defautCalories = parseInt(document.getElementById("numberCalories").innerHTML);
   if (mealCalories > defautCalories) {
-    const myModal = new bootstrap.Modal(
-      document.getElementById("modalAlertCalories"),
-      {}
-    );
-    myModal.show();
+    alert(" Tu as dépassé ton apport en calorie journalier recommandé !");
   }
 }
 
-// Indiquer si l'IMC est 
+// Indiquer si l'IMC est
 
 $bmiType = document.querySelector("#imcType");
 $bmi = document.querySelector("#imcNumber").innerHTML;

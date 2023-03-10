@@ -102,9 +102,7 @@ ob_start();
           <input type="hidden" id="typeOfMeal" name="typeOfMeal">
           <div id="numberOfCalories">
             <label for="numberCaloriesForm" class="form-label">Nombre de calories</label>
-
             <input type="text" class="form-control mb-4" id="numberCaloriesForm" name="calories" placeholder="Indique le nombre de calories de ton repas" required />
-
           </div>
           <div id="mealDetails">
             <label for="mealDescriptionForm" class="form-label">Décris ton repas</label>
@@ -120,22 +118,6 @@ ob_start();
   </div>
 </div>
 
-
-<!-- .........................................Modal alerte nombre calories dépassées -->
-<div class="modal fade" id="modalAlertCalories" tabindex="-1" aria-labelledby="modalAlertCalories" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content" id="modalAlertContent">
-      <div class="modal-header border border-0">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <h1 class="modal-title fs-5 mb-" id="titleImcModal">ATTENTION</h1>
-        <p id="alertCaloriesModal">Tu as dépassé ton apport en calorie journalier recommandé !</p>
-      </div>
-    </div>
-  </div>
-
-</div>
 <?php
 $content = ob_get_clean();
 require 'template.php';
