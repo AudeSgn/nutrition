@@ -1,7 +1,8 @@
 <?php
 $title = 'Homepage';
 session_start();
-ob_start(); ?>
+ob_start();
+?>
 <div class="container">
   <div id="buttonsRound">
     <div id="btnImc">
@@ -135,7 +136,7 @@ ob_start(); ?>
   </div>
 
 </div>
-
-<?php $content = ob_get_clean();
+<?php
+$content = ob_get_clean();
 require 'template.php';
 ?>
