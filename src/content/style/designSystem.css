@@ -13,17 +13,8 @@ body {
   background-size: cover;
 }
 
-
-
-#content {
-  /* overflow-y: scroll; */
-  display: flex;
-  flex-direction: column;
-}
-
 #content {
   width: 100%;
-  overflow-y: scroll;
   display: flex;
   flex-direction: column;
   margin-top: 5vh;
@@ -35,6 +26,17 @@ body {
   margin-left: 0.5em;
 }
 /* HEADER */
+
+.alertMessage {
+  font-family:"biryani", sans-serif;
+  font-size: 14px;
+  color:#393737;
+  width:100vw;
+  background-color: #f7e277;
+text-align: center;
+padding : 0.2rem;
+margin-bottom: 0.2em;
+}
 
 #header {
   width: 90%;

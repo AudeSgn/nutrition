@@ -91,9 +91,7 @@ p {
 .allBtnMeal {
   margin-bottom: 15px;
 }
-#alertCalories {
-  display: none;
-}
+
 /* ......................................graphic */
 #graphCalories {
   width: auto;
