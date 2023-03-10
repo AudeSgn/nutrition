@@ -27,7 +27,8 @@ function createUser()
     $result = setCreateUser($lastname, $firstname, $username, $password, $size, $weight, $birthdate,  $sportive_activity, $sex);
 
     if ($result === true) {
-      header("Location:../../index.php");
+
+      header('Location:../../index.php');
     }
   }
 }

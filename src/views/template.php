@@ -1,8 +1,8 @@
 <?php
-
-    if (!isset($_SESSION["auth"]["id"])) {
-        header("Location: ./../index.php");
-    }
+require_once "./../controllers/alertCaloriesController.php";
+if (!isset($_SESSION["auth"]["id"])) {
+    header("Location: ./../index.php");
+}
 ?>
 
 <!DOCTYPE html>
@@ -28,6 +28,12 @@
 </head>
 
 <body>
+    <?php if (getCaloriesForDay($_SESSION["auth"]["calories"])) {
+    ?>
+        <div class="alertMessage">Tu as dépassé ton apport en calories journalier recommandé !</div>
+    <?php
+    }
+    ?>
     <header id="header">
         <div id="logoHello">
             <a href="./../controllers/homeController.php">
@@ -49,6 +55,7 @@
                 <i class="fa-solid fa-power-off" id="logout" alt="se déconnecter"></i>
             </a>
         </div>
+
     </header>
     <div id="content">
         <?= $content ?>
@@ -64,6 +71,7 @@
     <script src="../js/auth.js"></script>
     <script src="../js/graphic.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
 </body>
 
 </html>
