@@ -13,6 +13,8 @@ body {
   background-size: cover;
 }
 
+
+
 #content {
   /* overflow-y: scroll; */
   display: flex;
@@ -39,6 +41,7 @@ body {
   display: flex;
   justify-content: space-between;
 }
+
 
 #header img {
   width: 150px;

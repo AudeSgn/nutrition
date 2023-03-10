@@ -1,6 +1,6 @@
 <?php
 $title = 'Homepage';
-session_start();
+if(session_status() === PHP_SESSION_NONE) session_start();
 ob_start();
 ?>
 <div class="container">
