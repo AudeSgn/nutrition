@@ -20,7 +20,7 @@ function getAllMeals()
 {
     $pdo = getConnection();
     $query = $pdo->prepare("SELECT * FROM meal WHERE user_id=?
-    ORDER BY meal_date asc");
+    ORDER BY meal_date desc");
     $query->execute(array($_SESSION["auth"]["id"]));
     $meals = $query->fetchAll();
     return $meals;
