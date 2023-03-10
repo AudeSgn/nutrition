@@ -51,9 +51,9 @@
                 </div>
                 <span>Je n'ai pas de compte</span>
                 <?php session_start();
-                if (isset($_SESSION["error"]["id"])) {
-                    echo '<label for="error_id" class="error">' . $_SESSION["error"]["id"] . '</label>';
-                } ?>
+                if (isset($_SESSION["error"]["id"])) {?>
+                <label for="error_id" class="error"><?= $_SESSION["error"]["id"] ?></label>
+                <?php } session_destroy(); ?>
                 <input type="text" name="username" placeholder="identifiant">
                 <input type="password" name="password" placeholder="mot de passe">
                 <input type="submit" value="Se connecter">
